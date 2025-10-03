@@ -1,0 +1,292 @@
+{
+    "skills": {
+        "obstacle_course_seed42": {
+            "task_path": "skills/obstacle_course_seed42",
+            "policy_path": "trained_policies/obstacle_course_seed42.pt",
+            "description": "Complete the obstacle course by navigating through various physical challenges.",
+            "object_config_paths": [
+                "../object_config.json"
+            ],
+            "is_primitive": false,
+            "sub_skills": [
+                "OvercomeLowWall",
+                "PushLargeSphere",
+                "KickSmallSphere",
+                "JumpOnBlockCube"
+            ],
+            "used_by": []
+        },
+        "OvercomeLowWall": {
+            "task_path": "skills/OvercomeLowWall",
+            "policy_path": "trained_policies/OvercomeLowWall.pt",
+            "description": "Approach the low wall and jump over it to the other side.",
+            "object_config_paths": [
+                "../object_config.json"
+            ],
+            "is_primitive": false,
+            "sub_skills": [
+                "walk_to_lowWall",
+                "jump_over_lowWall",
+                "stabilize_after_jump"
+            ],
+            "used_by": [
+                "obstacle_course_seed42"
+            ]
+        },
+        "walk_to_lowWall": {
+            "task_path": "skills/walk_to_lowWall",
+            "policy_path": "trained_policies/walk_to_lowWall.pt",
+            "description": "The robot should walk until it is positioned directly in front of the low wall, ready to initiate a jump. The goal state is the robot being within a suitable jumping distance from the low wall, facing it.",
+            "object_config_paths": [
+                "../object_config.json"
+            ],
+            "is_primitive": true,
+            "sub_skills": [],
+            "used_by": [
+                "OvercomeLowWall"
+            ]
+        },
+        "jump_over_lowWall": {
+            "task_path": "skills/jump_over_lowWall",
+            "policy_path": "trained_policies/jump_over_lowWall.pt",
+            "description": "The robot should perform a jump action to clear the low wall, landing on the opposite side. The goal state is the robot having successfully cleared the low wall and landed on the ground on the far side.",
+            "object_config_paths": [
+                "../object_config.json"
+            ],
+            "is_primitive": true,
+            "sub_skills": [],
+            "used_by": [
+                "OvercomeLowWall"
+            ]
+        },
+        "stabilize_after_jump": {
+            "task_path": "skills/stabilize_after_jump",
+            "policy_path": "trained_policies/stabilize_after_jump.pt",
+            "description": "The robot should regain its balance and achieve a stable standing posture after landing from the jump. The goal state is the robot standing upright and stable, ready for the next movement.",
+            "object_config_paths": [
+                "../object_config.json"
+            ],
+            "is_primitive": true,
+            "sub_skills": [],
+            "used_by": [
+                "OvercomeLowWall"
+            ]
+        },
+        "PushLargeSphere": {
+            "task_path": "skills/PushLargeSphere",
+            "policy_path": "trained_policies/PushLargeSphere.pt",
+            "description": "Locate the large sphere and push it towards the high wall until the wall is pushed over.",
+            "object_config_paths": [
+                "../object_config.json"
+            ],
+            "is_primitive": false,
+            "sub_skills": [
+                "walk_to_largeSphere",
+                "push_largeSphere_towards_highWall"
+            ],
+            "used_by": [
+                "obstacle_course_seed42"
+            ]
+        },
+        "walk_to_largeSphere": {
+            "task_path": "skills/walk_to_largeSphere",
+            "policy_path": "trained_policies/walk_to_largeSphere.pt",
+            "description": "The robot should walk until it is positioned directly behind the large sphere, ready to apply force to push it towards the high wall. The goal state is the robot being in contact with or immediately behind the large sphere, facing the high wall.",
+            "object_config_paths": [
+                "../object_config.json"
+            ],
+            "is_primitive": true,
+            "sub_skills": [],
+            "used_by": [
+                "PushLargeSphere"
+            ]
+        },
+        "push_largeSphere_towards_highWall": {
+            "task_path": "skills/push_largeSphere_towards_highWall",
+            "policy_path": "trained_policies/push_largeSphere_towards_highWall.pt",
+            "description": "The robot should apply force to the large sphere, pushing it in a straight line towards the high wall until the high wall is knocked over. The goal state is the large sphere having made contact with and toppled the high wall, and the robot maintaining a stable position.",
+            "object_config_paths": [
+                "../object_config.json"
+            ],
+            "is_primitive": true,
+            "sub_skills": [],
+            "used_by": [
+                "PushLargeSphere"
+            ]
+        },
+        "KickSmallSphere": {
+            "task_path": "skills/KickSmallSphere",
+            "policy_path": "trained_policies/KickSmallSphere.pt",
+            "description": "Approach the small sphere and kick it away from its current position.",
+            "object_config_paths": [
+                "../object_config.json"
+            ],
+            "is_primitive": false,
+            "sub_skills": [
+                "walk_to_smallSphere",
+                "kick_smallSphere"
+            ],
+            "used_by": [
+                "obstacle_course_seed42"
+            ]
+        },
+        "walk_to_smallSphere": {
+            "task_path": "skills/walk_to_smallSphere",
+            "policy_path": "trained_policies/walk_to_smallSphere.pt",
+            "description": "The robot should walk until it is positioned next to the small sphere, ready to perform a kicking action. The goal state is the robot being within kicking range of the small sphere.",
+            "object_config_paths": [
+                "../object_config.json"
+            ],
+            "is_primitive": true,
+            "sub_skills": [],
+            "used_by": [
+                "KickSmallSphere"
+            ]
+        },
+        "kick_smallSphere": {
+            "task_path": "skills/kick_smallSphere",
+            "policy_path": "trained_policies/kick_smallSphere.pt",
+            "description": "The robot should perform a kicking motion to propel the small sphere away from its current location. The goal state is the small sphere having been displaced significantly from its original position by the robot's kick, and the robot maintaining a stable posture.",
+            "object_config_paths": [
+                "../object_config.json"
+            ],
+            "is_primitive": true,
+            "sub_skills": [],
+            "used_by": [
+                "KickSmallSphere"
+            ]
+        },
+        "JumpOnBlockCube": {
+            "task_path": "skills/JumpOnBlockCube",
+            "policy_path": "trained_policies/JumpOnBlockCube.pt",
+            "description": "Walk to the block cube and jump on top of it.",
+            "object_config_paths": [
+                "../object_config.json"
+            ],
+            "is_primitive": false,
+            "sub_skills": [
+                "walk_to_blockCube",
+                "jump_on_top_of_blockCube",
+                "stabilize_on_blockCube"
+            ],
+            "used_by": [
+                "obstacle_course_seed42"
+            ]
+        },
+        "walk_to_blockCube": {
+            "task_path": "skills/walk_to_blockCube",
+            "policy_path": "trained_policies/walk_to_blockCube.pt",
+            "description": "The robot should walk until it is positioned directly in front of the block cube, ready to jump onto it. The goal state is the robot being within a suitable jumping distance from the block cube, facing it.",
+            "object_config_paths": [
+                "../object_config.json"
+            ],
+            "is_primitive": true,
+            "sub_skills": [],
+            "used_by": [
+                "JumpOnBlockCube"
+            ]
+        },
+        "jump_on_top_of_blockCube": {
+            "task_path": "skills/jump_on_top_of_blockCube",
+            "policy_path": "trained_policies/jump_on_top_of_blockCube.pt",
+            "description": "The robot should perform a jump action to land on top of the block cube. The goal state is the robot having successfully landed on the top surface of the block cube.",
+            "object_config_paths": [
+                "../object_config.json"
+            ],
+            "is_primitive": true,
+            "sub_skills": [],
+            "used_by": [
+                "JumpOnBlockCube"
+            ]
+        },
+        "stabilize_on_blockCube": {
+            "task_path": "skills/stabilize_on_blockCube",
+            "policy_path": "trained_policies/stabilize_on_blockCube.pt",
+            "description": "The robot should regain its balance and achieve a stable standing posture while on top of the block cube. The goal state is the robot standing upright and stable on the block cube, completing the final obstacle.",
+            "object_config_paths": [
+                "../object_config.json"
+            ],
+            "is_primitive": true,
+            "sub_skills": [],
+            "used_by": [
+                "JumpOnBlockCube"
+            ]
+        }
+    },
+    "hierarchies": {
+        "obstacle_course_seed42": {
+            "created_at": "2025-08-05T17:02:47.817178",
+            "description": " Environment set-up description: The environment should have five objects in it. A wide low wall, 5m in the y-axis and 0.5m in the z and 0.3m in x axis. A large sphere 1m radius. A wide high wall, 5m in the y axis 1m in the z axis and 0.3m in the x axis. A small sphere 0.2m radius. and a block cube of 0.5m cubed. These objects should be positioned along the x axis in a line, with 3m separating each. The order should be: 1) Low wall, 2) large sphere, 3) high wall, 4) small sphere and 5) block. The robot will start at 0,0,0 and the first object (low wall) should be 3m away in the x axis. Such that the robot meets each object sequentially like an obstacle course.  \n        \n        Robot task description: The robot should first walk to the low wall and then jump over it, then the robot should push the large sphere into the high wall. The sphere hitting the high wall should push it over. The robot should then walk to a small sphere and kick it away from the wall. Finally the robot should walk to a 0.5x0.5x0.5 block and jump on top of it. ",
+            "structure": {
+                "name": "obstacle_course_seed42",
+                "description": "Complete the obstacle course by navigating through various physical challenges.",
+                "children": [
+                    {
+                        "name": "OvercomeLowWall",
+                        "description": "Approach the low wall and jump over it to the other side.",
+                        "children": [
+                            {
+                                "name": "walk_to_lowWall",
+                                "description": "The robot should walk until it is positioned directly in front of the low wall, ready to initiate a jump. The goal state is the robot being within a suitable jumping distance from the low wall, facing it."
+                            },
+                            {
+                                "name": "jump_over_lowWall",
+                                "description": "The robot should perform a jump action to clear the low wall, landing on the opposite side. The goal state is the robot having successfully cleared the low wall and landed on the ground on the far side."
+                            },
+                            {
+                                "name": "stabilize_after_jump",
+                                "description": "The robot should regain its balance and achieve a stable standing posture after landing from the jump. The goal state is the robot standing upright and stable, ready for the next movement."
+                            }
+                        ]
+                    },
+                    {
+                        "name": "PushLargeSphere",
+                        "description": "Locate the large sphere and push it towards the high wall until the wall is pushed over.",
+                        "children": [
+                            {
+                                "name": "walk_to_largeSphere",
+                                "description": "The robot should walk until it is positioned directly behind the large sphere, ready to apply force to push it towards the high wall. The goal state is the robot being in contact with or immediately behind the large sphere, facing the high wall."
+                            },
+                            {
+                                "name": "push_largeSphere_towards_highWall",
+                                "description": "The robot should apply force to the large sphere, pushing it in a straight line towards the high wall until the high wall is knocked over. The goal state is the large sphere having made contact with and toppled the high wall, and the robot maintaining a stable position."
+                            }
+                        ]
+                    },
+                    {
+                        "name": "KickSmallSphere",
+                        "description": "Approach the small sphere and kick it away from its current position.",
+                        "children": [
+                            {
+                                "name": "walk_to_smallSphere",
+                                "description": "The robot should walk until it is positioned next to the small sphere, ready to perform a kicking action. The goal state is the robot being within kicking range of the small sphere."
+                            },
+                            {
+                                "name": "kick_smallSphere",
+                                "description": "The robot should perform a kicking motion to propel the small sphere away from its current location. The goal state is the small sphere having been displaced significantly from its original position by the robot's kick, and the robot maintaining a stable posture."
+                            }
+                        ]
+                    },
+                    {
+                        "name": "JumpOnBlockCube",
+                        "description": "Walk to the block cube and jump on top of it.",
+                        "children": [
+                            {
+                                "name": "walk_to_blockCube",
+                                "description": "The robot should walk until it is positioned directly in front of the block cube, ready to jump onto it. The goal state is the robot being within a suitable jumping distance from the block cube, facing it."
+                            },
+                            {
+                                "name": "jump_on_top_of_blockCube",
+                                "description": "The robot should perform a jump action to land on top of the block cube. The goal state is the robot having successfully landed on the top surface of the block cube."
+                            },
+                            {
+                                "name": "stabilize_on_blockCube",
+                                "description": "The robot should regain its balance and achieve a stable standing posture while on top of the block cube. The goal state is the robot standing upright and stable on the block cube, completing the final obstacle."
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    }
+}

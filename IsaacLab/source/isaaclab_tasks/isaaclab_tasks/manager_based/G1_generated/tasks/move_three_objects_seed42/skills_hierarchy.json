@@ -1,0 +1,78 @@
+{
+  "name": "move_three_objects_seed42",
+  "description": "The robot should move each of the three 0.5m cubed blocks from their start location onto the platform by pushing them individually.",
+  "children": [
+    {
+      "name": "walk_to_cube_for_robot_to_push_1",
+      "description": "The robot should walk to a position near the first 'Cube for robot to push' (Object1) to prepare for pushing. The goal state is for the robot to be positioned appropriately to initiate a push on 'Cube for robot to push' (Object1).",
+      "object_config_paths": [
+        "/home/tomcannon/Documents/GenHRL_v2/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/manager_based/G1_generated/skills/move_three_objects_seed42/object_config.json"
+      ],
+      "children": []
+    },
+    {
+      "name": "push_cube_for_robot_to_push_1_towards_platform_for_cubes",
+      "description": "The robot should push the first 'Cube for robot to push' (Object1) in the general direction of 'Platform for cubes' (Object4). The goal state is for 'Cube for robot to push' (Object1) to be significantly displaced from its starting position and moving towards or near 'Platform for cubes' (Object4).",
+      "object_config_paths": [
+        "/home/tomcannon/Documents/GenHRL_v2/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/manager_based/G1_generated/skills/move_three_objects_seed42/object_config.json"
+      ],
+      "children": []
+    },
+    {
+      "name": "push_cube_for_robot_to_push_1_onto_platform_for_cubes",
+      "description": "The robot should perform final pushes on the first 'Cube for robot to push' (Object1) to ensure it is fully and stably positioned on 'Platform for cubes' (Object4). The goal state is for 'Cube for robot to push' (Object1) to be entirely on 'Platform for cubes' (Object4) and stable.",
+      "object_config_paths": [
+        "/home/tomcannon/Documents/GenHRL_v2/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/manager_based/G1_generated/skills/move_three_objects_seed42/object_config.json"
+      ],
+      "children": []
+    },
+    {
+      "name": "walk_to_cube_for_robot_to_push_2",
+      "description": "The robot should walk to a position near the second 'Cube for robot to push' (Object2) to prepare for pushing. The goal state is for the robot to be positioned appropriately to initiate a push on 'Cube for robot to push' (Object2).",
+      "object_config_paths": [
+        "/home/tomcannon/Documents/GenHRL_v2/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/manager_based/G1_generated/skills/move_three_objects_seed42/object_config.json"
+      ],
+      "children": []
+    },
+    {
+      "name": "push_cube_for_robot_to_push_2_towards_platform_for_cubes",
+      "description": "The robot should push the second 'Cube for robot to push' (Object2) in the general direction of 'Platform for cubes' (Object4). The goal state is for 'Cube for robot to push' (Object2) to be significantly displaced from its starting position and moving towards or near 'Platform for cubes' (Object4).",
+      "object_config_paths": [
+        "/home/tomcannon/Documents/GenHRL_v2/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/manager_based/G1_generated/skills/move_three_objects_seed42/object_config.json"
+      ],
+      "children": []
+    },
+    {
+      "name": "push_cube_for_robot_to_push_2_onto_platform_for_cubes",
+      "description": "The robot should perform final pushes on the second 'Cube for robot to push' (Object2) to ensure it is fully and stably positioned on 'Platform for cubes' (Object4). The goal state is for 'Cube for robot to push' (Object2) to be entirely on 'Platform for cubes' (Object4) and stable.",
+      "object_config_paths": [
+        "/home/tomcannon/Documents/GenHRL_v2/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/manager_based/G1_generated/skills/move_three_objects_seed42/object_config.json"
+      ],
+      "children": []
+    },
+    {
+      "name": "walk_to_cube_for_robot_to_push_3",
+      "description": "The robot should walk to a position near the third 'Cube for robot to push' (Object3) to prepare for pushing. The goal state is for the robot to be positioned appropriately to initiate a push on 'Cube for robot to push' (Object3).",
+      "object_config_paths": [
+        "/home/tomcannon/Documents/GenHRL_v2/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/manager_based/G1_generated/skills/move_three_objects_seed42/object_config.json"
+      ],
+      "children": []
+    },
+    {
+      "name": "push_cube_for_robot_to_push_3_towards_platform_for_cubes",
+      "description": "The robot should push the third 'Cube for robot to push' (Object3) in the general direction of 'Platform for cubes' (Object4). The goal state is for 'Cube for robot to push' (Object3) to be significantly displaced from its starting position and moving towards or near 'Platform for cubes' (Object4).",
+      "object_config_paths": [
+        "/home/tomcannon/Documents/GenHRL_v2/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/manager_based/G1_generated/skills/move_three_objects_seed42/object_config.json"
+      ],
+      "children": []
+    },
+    {
+      "name": "push_cube_for_robot_to_push_3_onto_platform_for_cubes",
+      "description": "The robot should perform final pushes on the third 'Cube for robot to push' (Object3) to ensure it is fully and stably positioned on 'Platform for cubes' (Object4). The goal state is for 'Cube for robot to push' (Object3) to be entirely on 'Platform for cubes' (Object4) and stable.",
+      "object_config_paths": [
+        "/home/tomcannon/Documents/GenHRL_v2/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/manager_based/G1_generated/skills/move_three_objects_seed42/object_config.json"
+      ],
+      "children": []
+    }
+  ]
+}

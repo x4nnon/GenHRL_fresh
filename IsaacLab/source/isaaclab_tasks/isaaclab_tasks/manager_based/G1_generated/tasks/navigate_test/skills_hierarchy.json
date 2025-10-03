@@ -1,0 +1,53 @@
+{
+  "name": "navigate_test",
+  "description": "The robot navigates to a cone, a cylinder, and a cube in sequence, then returns to its starting position, and finally performs jumping actions.",
+  "children": [
+    {
+      "name": "Navigate_to_Objects_in_Sequence",
+      "description": "The robot sequentially walks to the cone, then the cylinder, and then the cube, ensuring it reaches within 1m of each.",
+      "children": [
+        {
+          "name": "Walk_to_cone",
+          "description": "The robot walks towards the cone until its base is within 1m of the cone's base. The goal state is achieved when the robot's position is within 1m of the cone, providing a stable configuration to begin walking towards the cylinder.",
+          "object_config_paths": [
+            "/home/tomcannon/Documents/GenHRL_v2/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/manager_based/G1_generated/skills/navigate_test/object_config.json"
+          ]
+        },
+        {
+          "name": "Walk_to_cylinder",
+          "description": "The robot walks towards the cylinder until its base is within 1m of the cylinder's base. The goal state is achieved when the robot's position is within 1m of the cylinder, providing a stable configuration to begin walking towards the cube.",
+          "object_config_paths": [
+            "/home/tomcannon/Documents/GenHRL_v2/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/manager_based/G1_generated/skills/navigate_test/object_config.json"
+          ]
+        },
+        {
+          "name": "Walk_to_cube",
+          "description": "The robot walks towards the cube until its base is within 1m of the cube's base. The goal state is achieved when the robot's position is within 1m of the cube, providing a stable configuration to begin walking back to the start location.",
+          "object_config_paths": [
+            "/home/tomcannon/Documents/GenHRL_v2/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/manager_based/G1_generated/skills/navigate_test/object_config.json"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Return_to_Start_and_Jump",
+      "description": "The robot returns to its initial starting position and then performs a sequence of jumping actions.",
+      "children": [
+        {
+          "name": "Walk_to_startLocation",
+          "description": "The robot walks towards its initial starting position (0,0) in x and y coordinates until its base is within 1m of that point. The goal state is achieved when the robot's position is within 1m of the start location, providing a stable configuration to begin jumping.",
+          "object_config_paths": [
+            "/home/tomcannon/Documents/GenHRL_v2/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/manager_based/G1_generated/skills/navigate_test/object_config.json"
+          ]
+        },
+        {
+          "name": "Jump_up_and_down",
+          "description": "The robot performs a sequence of vertical jumps, repeatedly lifting its body off the ground and landing. The goal state is achieved after the robot has completed a predefined number of jumps, signifying the completion of the task.",
+          "object_config_paths": [
+            "/home/tomcannon/Documents/GenHRL_v2/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/manager_based/G1_generated/skills/navigate_test/object_config.json"
+          ]
+        }
+      ]
+    }
+  ]
+}

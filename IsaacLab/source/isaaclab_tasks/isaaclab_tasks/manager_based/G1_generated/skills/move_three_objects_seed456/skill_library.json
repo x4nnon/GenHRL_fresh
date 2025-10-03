@@ -1,0 +1,226 @@
+{
+    "skills": {
+        "move_three_objects_seed456": {
+            "task_path": "skills/move_three_objects_seed456",
+            "policy_path": "trained_policies/move_three_objects_seed456.pt",
+            "description": "The robot should move each of the three 0.5m cubed blocks from their starting locations onto the designated platform by pushing them individually.",
+            "object_config_paths": [
+                "../object_config.json"
+            ],
+            "is_primitive": false,
+            "sub_skills": [
+                "walk_to_First_0_5m_cubed_block",
+                "push_First_0_5m_cubed_block_towards_Platform",
+                "adjust_First_0_5m_cubed_block_on_Platform",
+                "walk_to_Second_0_5m_cubed_block",
+                "push_Second_0_5m_cubed_block_towards_Platform",
+                "adjust_Second_0_5m_cubed_block_on_Platform",
+                "walk_to_Third_0_5m_cubed_block",
+                "push_Third_0_5m_cubed_block_towards_Platform",
+                "adjust_Third_0_5m_cubed_block_on_Platform"
+            ],
+            "used_by": []
+        },
+        "walk_to_First_0_5m_cubed_block": {
+            "task_path": "skills/walk_to_First_0_5m_cubed_block",
+            "policy_path": "trained_policies/walk_to_First_0_5m_cubed_block.pt",
+            "description": "The robot should walk to a position adjacent to the First 0.5m cubed block, preparing to push it. The goal state is for the robot to be within pushing distance of the First 0.5m cubed block, ready for the next pushing action.",
+            "object_config_paths": [
+                "../object_config.json"
+            ],
+            "is_primitive": true,
+            "sub_skills": [],
+            "used_by": [
+                "move_three_objects_seed456"
+            ]
+        },
+        "push_First_0_5m_cubed_block_towards_Platform": {
+            "task_path": "skills/push_First_0_5m_cubed_block_towards_Platform",
+            "policy_path": "trained_policies/push_First_0_5m_cubed_block_towards_Platform.pt",
+            "description": "The robot should apply continuous force to the First 0.5m cubed block, pushing it from its initial position towards the Platform. The goal state is for the First 0.5m cubed block to be on or very close to the edge of the Platform, ready for final adjustment.",
+            "object_config_paths": [
+                "../object_config.json"
+            ],
+            "is_primitive": true,
+            "sub_skills": [],
+            "used_by": [
+                "move_three_objects_seed456"
+            ]
+        },
+        "adjust_First_0_5m_cubed_block_on_Platform": {
+            "task_path": "skills/adjust_First_0_5m_cubed_block_on_Platform",
+            "policy_path": "trained_policies/adjust_First_0_5m_cubed_block_on_Platform.pt",
+            "description": "The robot should make small, controlled pushes to ensure the First 0.5m cubed block is fully and stably positioned within the boundaries of the Platform. The goal state is for the First 0.5m cubed block to be entirely on the Platform, stable and not at risk of falling off.",
+            "object_config_paths": [
+                "../object_config.json"
+            ],
+            "is_primitive": true,
+            "sub_skills": [],
+            "used_by": [
+                "move_three_objects_seed456"
+            ]
+        },
+        "walk_to_Second_0_5m_cubed_block": {
+            "task_path": "skills/walk_to_Second_0_5m_cubed_block",
+            "policy_path": "trained_policies/walk_to_Second_0_5m_cubed_block.pt",
+            "description": "The robot should walk to a position adjacent to the Second 0.5m cubed block, preparing to push it. The goal state is for the robot to be within pushing distance of the Second 0.5m cubed block, ready for the next pushing action.",
+            "object_config_paths": [
+                "../object_config.json"
+            ],
+            "is_primitive": true,
+            "sub_skills": [],
+            "used_by": [
+                "move_three_objects_seed456"
+            ]
+        },
+        "push_Second_0_5m_cubed_block_towards_Platform": {
+            "task_path": "skills/push_Second_0_5m_cubed_block_towards_Platform",
+            "policy_path": "trained_policies/push_Second_0_5m_cubed_block_towards_Platform.pt",
+            "description": "The robot should apply continuous force to the Second 0.5m cubed block, pushing it from its initial position towards the Platform. The goal state is for the Second 0.5m cubed block to be on or very close to the edge of the Platform, ready for final adjustment.",
+            "object_config_paths": [
+                "../object_config.json"
+            ],
+            "is_primitive": true,
+            "sub_skills": [],
+            "used_by": [
+                "move_three_objects_seed456"
+            ]
+        },
+        "adjust_Second_0_5m_cubed_block_on_Platform": {
+            "task_path": "skills/adjust_Second_0_5m_cubed_block_on_Platform",
+            "policy_path": "trained_policies/adjust_Second_0_5m_cubed_block_on_Platform.pt",
+            "description": "The robot should make small, controlled pushes to ensure the Second 0.5m cubed block is fully and stably positioned within the boundaries of the Platform. The goal state is for the Second 0.5m cubed block to be entirely on the Platform, stable and not at risk of falling off.",
+            "object_config_paths": [
+                "../object_config.json"
+            ],
+            "is_primitive": true,
+            "sub_skills": [],
+            "used_by": [
+                "move_three_objects_seed456"
+            ]
+        },
+        "walk_to_Third_0_5m_cubed_block": {
+            "task_path": "skills/walk_to_Third_0_5m_cubed_block",
+            "policy_path": "trained_policies/walk_to_Third_0_5m_cubed_block.pt",
+            "description": "The robot should walk to a position adjacent to the Third 0.5m cubed block, preparing to push it. The goal state is for the robot to be within pushing distance of the Third 0.5m cubed block, ready for the next pushing action.",
+            "object_config_paths": [
+                "../object_config.json"
+            ],
+            "is_primitive": true,
+            "sub_skills": [],
+            "used_by": [
+                "move_three_objects_seed456"
+            ]
+        },
+        "push_Third_0_5m_cubed_block_towards_Platform": {
+            "task_path": "skills/push_Third_0_5m_cubed_block_towards_Platform",
+            "policy_path": "trained_policies/push_Third_0_5m_cubed_block_towards_Platform.pt",
+            "description": "The robot should apply continuous force to the Third 0.5m cubed block, pushing it from its initial position towards the Platform. The goal state is for the Third 0.5m cubed block to be on or very close to the edge of the Platform, ready for final adjustment.",
+            "object_config_paths": [
+                "../object_config.json"
+            ],
+            "is_primitive": true,
+            "sub_skills": [],
+            "used_by": [
+                "move_three_objects_seed456"
+            ]
+        },
+        "adjust_Third_0_5m_cubed_block_on_Platform": {
+            "task_path": "skills/adjust_Third_0_5m_cubed_block_on_Platform",
+            "policy_path": "trained_policies/adjust_Third_0_5m_cubed_block_on_Platform.pt",
+            "description": "The robot should make small, controlled pushes to ensure the Third 0.5m cubed block is fully and stably positioned within the boundaries of the Platform. The goal state is for the Third 0.5m cubed block to be entirely on the Platform, stable and not at risk of falling off.",
+            "object_config_paths": [
+                "../object_config.json"
+            ],
+            "is_primitive": true,
+            "sub_skills": [],
+            "used_by": [
+                "move_three_objects_seed456"
+            ]
+        }
+    },
+    "hierarchies": {
+        "move_three_objects_seed456": {
+            "created_at": "2025-08-05T18:57:24.920048",
+            "description": " Environment set-up description: The environment should have four objects. three of these objects should be 0.5m cubed blocks. These blocks should be arranged in a small triangle of 1m on each side and this centre of this triangle should be 2m from the robot (the robot will be at 0,0,0). The fourth object should be a platform x=2m y=2m and z=0.001. This platform should be positioned 4m from the triangle of cubes.\n        \n        Robot task description: The robot should move each of the cubes from their start location onto the platform. The robot will need to move each objet individually. The robot should just push the object and not pick them up.",
+            "structure": {
+                "name": "move_three_objects_seed456",
+                "description": "The robot should move each of the three 0.5m cubed blocks from their starting locations onto the designated platform by pushing them individually.",
+                "children": [
+                    {
+                        "name": "walk_to_First_0_5m_cubed_block",
+                        "description": "The robot should walk to a position adjacent to the First 0.5m cubed block, preparing to push it. The goal state is for the robot to be within pushing distance of the First 0.5m cubed block, ready for the next pushing action.",
+                        "object_config_paths": [
+                            "/home/tomcannon/Documents/GenHRL_v2/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/manager_based/G1_generated/skills/move_three_objects_seed456/object_config.json"
+                        ],
+                        "children": []
+                    },
+                    {
+                        "name": "push_First_0_5m_cubed_block_towards_Platform",
+                        "description": "The robot should apply continuous force to the First 0.5m cubed block, pushing it from its initial position towards the Platform. The goal state is for the First 0.5m cubed block to be on or very close to the edge of the Platform, ready for final adjustment.",
+                        "object_config_paths": [
+                            "/home/tomcannon/Documents/GenHRL_v2/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/manager_based/G1_generated/skills/move_three_objects_seed456/object_config.json"
+                        ],
+                        "children": []
+                    },
+                    {
+                        "name": "adjust_First_0_5m_cubed_block_on_Platform",
+                        "description": "The robot should make small, controlled pushes to ensure the First 0.5m cubed block is fully and stably positioned within the boundaries of the Platform. The goal state is for the First 0.5m cubed block to be entirely on the Platform, stable and not at risk of falling off.",
+                        "object_config_paths": [
+                            "/home/tomcannon/Documents/GenHRL_v2/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/manager_based/G1_generated/skills/move_three_objects_seed456/object_config.json"
+                        ],
+                        "children": []
+                    },
+                    {
+                        "name": "walk_to_Second_0_5m_cubed_block",
+                        "description": "The robot should walk to a position adjacent to the Second 0.5m cubed block, preparing to push it. The goal state is for the robot to be within pushing distance of the Second 0.5m cubed block, ready for the next pushing action.",
+                        "object_config_paths": [
+                            "/home/tomcannon/Documents/GenHRL_v2/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/manager_based/G1_generated/skills/move_three_objects_seed456/object_config.json"
+                        ],
+                        "children": []
+                    },
+                    {
+                        "name": "push_Second_0_5m_cubed_block_towards_Platform",
+                        "description": "The robot should apply continuous force to the Second 0.5m cubed block, pushing it from its initial position towards the Platform. The goal state is for the Second 0.5m cubed block to be on or very close to the edge of the Platform, ready for final adjustment.",
+                        "object_config_paths": [
+                            "/home/tomcannon/Documents/GenHRL_v2/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/manager_based/G1_generated/skills/move_three_objects_seed456/object_config.json"
+                        ],
+                        "children": []
+                    },
+                    {
+                        "name": "adjust_Second_0_5m_cubed_block_on_Platform",
+                        "description": "The robot should make small, controlled pushes to ensure the Second 0.5m cubed block is fully and stably positioned within the boundaries of the Platform. The goal state is for the Second 0.5m cubed block to be entirely on the Platform, stable and not at risk of falling off.",
+                        "object_config_paths": [
+                            "/home/tomcannon/Documents/GenHRL_v2/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/manager_based/G1_generated/skills/move_three_objects_seed456/object_config.json"
+                        ],
+                        "children": []
+                    },
+                    {
+                        "name": "walk_to_Third_0_5m_cubed_block",
+                        "description": "The robot should walk to a position adjacent to the Third 0.5m cubed block, preparing to push it. The goal state is for the robot to be within pushing distance of the Third 0.5m cubed block, ready for the next pushing action.",
+                        "object_config_paths": [
+                            "/home/tomcannon/Documents/GenHRL_v2/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/manager_based/G1_generated/skills/move_three_objects_seed456/object_config.json"
+                        ],
+                        "children": []
+                    },
+                    {
+                        "name": "push_Third_0_5m_cubed_block_towards_Platform",
+                        "description": "The robot should apply continuous force to the Third 0.5m cubed block, pushing it from its initial position towards the Platform. The goal state is for the Third 0.5m cubed block to be on or very close to the edge of the Platform, ready for final adjustment.",
+                        "object_config_paths": [
+                            "/home/tomcannon/Documents/GenHRL_v2/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/manager_based/G1_generated/skills/move_three_objects_seed456/object_config.json"
+                        ],
+                        "children": []
+                    },
+                    {
+                        "name": "adjust_Third_0_5m_cubed_block_on_Platform",
+                        "description": "The robot should make small, controlled pushes to ensure the Third 0.5m cubed block is fully and stably positioned within the boundaries of the Platform. The goal state is for the Third 0.5m cubed block to be entirely on the Platform, stable and not at risk of falling off.",
+                        "object_config_paths": [
+                            "/home/tomcannon/Documents/GenHRL_v2/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/manager_based/G1_generated/skills/move_three_objects_seed456/object_config.json"
+                        ],
+                        "children": []
+                    }
+                ]
+            }
+        }
+    }
+}

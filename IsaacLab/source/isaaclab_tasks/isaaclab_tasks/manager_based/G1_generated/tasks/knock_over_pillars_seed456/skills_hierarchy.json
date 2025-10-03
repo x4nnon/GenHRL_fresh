@@ -1,0 +1,4 @@
+{
+  "name": "knock_over_pillars_seed456",
+  "description": "The robot should sequentially approach each of the five cylinder columns and apply force to them until all five are knocked over and lying on the floor. This is the top-level task that will be decomposed into simpler skills."
+}

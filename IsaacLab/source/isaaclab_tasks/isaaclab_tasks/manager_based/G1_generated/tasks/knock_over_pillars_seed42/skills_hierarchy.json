@@ -1,0 +1,46 @@
+{
+  "name": "knock_over_pillars_seed42",
+  "description": "The robot should walk to each of the objects in turn and knock them over such that they are on the floor. It should treat each object as a separate skill.",
+  "children": [
+    {
+      "name": "walk_to_cylinderColumn1",
+      "description": "The robot should walk to Cylinder Column 1 and stop in front of it, ready to interact."
+    },
+    {
+      "name": "knock_over_cylinderColumn1",
+      "description": "The robot should use its body or limbs to push Cylinder Column 1 until it falls completely onto the floor."
+    },
+    {
+      "name": "walk_to_cylinderColumn2",
+      "description": "The robot should walk to Cylinder Column 2 and stop in front of it, ready to interact."
+    },
+    {
+      "name": "knock_over_cylinderColumn2",
+      "description": "The robot should use its body or limbs to push Cylinder Column 2 until it falls completely onto the floor."
+    },
+    {
+      "name": "walk_to_cylinderColumn3",
+      "description": "The robot should walk to Cylinder Column 3 and stop in front of it, ready to interact."
+    },
+    {
+      "name": "knock_over_cylinderColumn3",
+      "description": "The robot should use its body or limbs to push Cylinder Column 3 until it falls completely onto the floor."
+    },
+    {
+      "name": "walk_to_cylinderColumn4",
+      "description": "The robot should walk to Cylinder Column 4 and stop in front of it, ready to interact."
+    },
+    {
+      "name": "knock_over_cylinderColumn4",
+      "description": "The robot should use its body or limbs to push Cylinder Column 4 until it falls completely onto the floor."
+    },
+    {
+      "name": "walk_to_cylinderColumn5",
+      "description": "The robot should walk to Cylinder Column 5 and stop in front of it, ready to interact."
+    },
+    {
+      "name": "knock_over_cylinderColumn5",
+      "description": "The robot should use its body or limbs to push Cylinder Column 5 until it falls completely onto the floor."
+    }
+  ]
+}

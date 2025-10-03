@@ -1,0 +1,4 @@
+Environment set-up description: The environment should have three objects in it. A small block measuring x=1m y=1m and z=0.3m. A medium block measuring x=1m y=1m and z=0.6m. A large block measuring x=1m y=1m and z=0.9m. These blocks should be positioned in a triangle each 4m from the origin (0,0,0) which is also where the robot will be.
+        
+        Robot task description: The robot should  should walk to each of the blocks in turn and push them into a sensible place near the other blocks such that it forms something resembling stairs.
+         Once the robot has built the stairs then it should jump onto each in turn so that it climbs the stairs.

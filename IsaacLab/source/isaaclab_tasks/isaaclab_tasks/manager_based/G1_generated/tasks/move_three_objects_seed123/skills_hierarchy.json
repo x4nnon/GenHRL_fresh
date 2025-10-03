@@ -1,0 +1,51 @@
+{
+  "name": "move_three_objects_seed123",
+  "description": "The robot should move each of the three 0.5m cubed blocks from their start location onto the platform by pushing them individually.",
+  "children": [
+    {
+      "name": "approach_first_0_5m_cubed_block",
+      "description": "The robot should walk to a position behind the 'first 0.5m cubed block', on the side opposite the 'platform', ready to push it towards the 'platform'. The goal state is for the robot to be positioned directly behind the 'first 0.5m cubed block', facing the 'platform', with its body aligned to push the block. This sets up the robot for the subsequent pushing action.",
+      "children": []
+    },
+    {
+      "name": "push_first_0_5m_cubed_block_towards_platform",
+      "description": "The robot should apply force to the 'first 0.5m cubed block' to move it in a straight line towards the 'platform'. The goal state is for the 'first 0.5m cubed block' to be moved significantly closer to the 'platform', but not yet fully on it. The robot should be in a stable position, either still pushing or having returned to a stable standing position near the block, ready for the final push onto the platform.",
+      "children": []
+    },
+    {
+      "name": "push_first_0_5m_cubed_block_onto_platform",
+      "description": "The robot should apply force to the 'first 0.5m cubed block' to move it from its current position onto the 'platform'. The goal state is for the 'first 0.5m cubed block' to be resting entirely on the surface of the 'platform'. The robot should be in a stable position, having completed the push, ready to move to the next block.",
+      "children": []
+    },
+    {
+      "name": "approach_second_0_5m_cubed_block",
+      "description": "The robot should walk to a position behind the 'second 0.5m cubed block', on the side opposite the 'platform', ready to push it towards the 'platform'. The goal state is for the robot to be positioned directly behind the 'second 0.5m cubed block', facing the 'platform', with its body aligned to push the block. This sets up the robot for the subsequent pushing action.",
+      "children": []
+    },
+    {
+      "name": "push_second_0_5m_cubed_block_towards_platform",
+      "description": "The robot should apply force to the 'second 0.5m cubed block' to move it in a straight line towards the 'platform'. The goal state is for the 'second 0.5m cubed block' to be moved significantly closer to the 'platform', but not yet fully on it. The robot should be in a stable position, either still pushing or having returned to a stable standing position near the block, ready for the final push onto the platform.",
+      "children": []
+    },
+    {
+      "name": "push_second_0_5m_cubed_block_onto_platform",
+      "description": "The robot should apply force to the 'second 0.5m cubed block' to move it from its current position onto the 'platform'. The goal state is for the 'second 0.5m cubed block' to be resting entirely on the surface of the 'platform'. The robot should be in a stable position, having completed the push, ready to move to the next block.",
+      "children": []
+    },
+    {
+      "name": "approach_third_0_5m_cubed_block",
+      "description": "The robot should walk to a position behind the 'third 0.5m cubed block', on the side opposite the 'platform', ready to push it towards the 'platform'. The goal state is for the robot to be positioned directly behind the 'third 0.5m cubed block', facing the 'platform', with its body aligned to push the block. This sets up the robot for the subsequent pushing action.",
+      "children": []
+    },
+    {
+      "name": "push_third_0_5m_cubed_block_towards_platform",
+      "description": "The robot should apply force to the 'third 0.5m cubed block' to move it in a straight line towards the 'platform'. The goal state is for the 'third 0.5m cubed block' to be moved significantly closer to the 'platform', but not yet fully on it. The robot should be in a stable position, either still pushing or having returned to a stable standing position near the block, ready for the final push onto the platform.",
+      "children": []
+    },
+    {
+      "name": "push_third_0_5m_cubed_block_onto_platform",
+      "description": "The robot should apply force to the 'third 0.5m cubed block' to move it from its current position onto the 'platform'. The goal state is for the 'third 0.5m cubed block' to be resting entirely on the surface of the 'platform'. The robot should be in a stable position, having completed the push, indicating the completion of the task for this block.",
+      "children": []
+    }
+  ]
+}

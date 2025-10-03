@@ -1,0 +1,7 @@
+{
+  "name": "perform_swimming_diving_board_challenge",
+  "description": "The robot should walk up the lower rectangular block, then the higher rectangular block, proceed to walk along the diving board platform, kick the small cone into the swimming pool, perform a diving motion into the swimming pool, and then act like it is swimming. The final state should have the cone in the pool and the robot actively swimming.",
+  "object_config_paths": [
+    "/home/tomcannon/Documents/GenHRL_v2/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/manager_based/G1_generated/skills/swimming_diving_board_seed42/object_config.json"
+  ]
+}

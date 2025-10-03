@@ -1,0 +1,102 @@
+{
+  "name": "build_stairs_seed456",
+  "description": "The robot builds stairs from three blocks and then climbs them.",
+  "children": [
+    {
+      "name": "Build_Stairs",
+      "description": "The robot positions the small, medium, and large blocks to form a stair-like structure.",
+      "children": [
+        {
+          "name": "Position_Small_Block_for_robot_interaction",
+          "description": "The robot walks to and pushes the Small Block for robot interaction into its designated base position for the stairs.",
+          "children": [
+            {
+              "name": "walk_to_Small_Block_for_robot_interaction",
+              "description": "The robot walks to a position near the Small Block for robot interaction, ready to interact with it. Goal state: Robot is within pushing distance of the Small Block for robot interaction."
+            },
+            {
+              "name": "push_Small_Block_for_robot_interaction_to_base_position",
+              "description": "The robot pushes the Small Block for robot interaction to its designated base position, forming the first step of the stairs. Goal state: Small Block for robot interaction is in its final base stair position, stable and ready for the next block."
+            }
+          ]
+        },
+        {
+          "name": "Position_Medium_Block_for_robot_interaction",
+          "description": "The robot walks to and pushes the Medium Block for robot interaction into its designated middle position, adjacent to the Small Block, to form the second step.",
+          "children": [
+            {
+              "name": "walk_to_Medium_Block_for_robot_interaction",
+              "description": "The robot walks to a position near the Medium Block for robot interaction, ready to interact with it. Goal state: Robot is within pushing distance of the Medium Block for robot interaction."
+            },
+            {
+              "name": "push_Medium_Block_for_robot_interaction_to_middle_position",
+              "description": "The robot pushes the Medium Block for robot interaction to its designated middle stair position, adjacent to the Small Block for robot interaction. Goal state: Medium Block for robot interaction is in its final middle stair position, stable and ready for the next block."
+            }
+          ]
+        },
+        {
+          "name": "Position_Large_Block_for_robot_interaction",
+          "description": "The robot walks to and pushes the Large Block for robot interaction into its designated top position, adjacent to the Medium Block, to complete the stairs.",
+          "children": [
+            {
+              "name": "walk_to_Large_Block_for_robot_interaction",
+              "description": "The robot walks to a position near the Large Block for robot interaction, ready to interact with it. Goal state: Robot is within pushing distance of the Large Block for robot interaction."
+            },
+            {
+              "name": "push_Large_Block_for_robot_interaction_to_top_position",
+              "description": "The robot pushes the Large Block for robot interaction to its designated top stair position, adjacent to the Medium Block for robot interaction. Goal state: Large Block for robot interaction is in its final top stair position, completing the stair structure."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Climb_Stairs",
+      "description": "The robot climbs the newly built stairs by jumping onto each block in sequence.",
+      "children": [
+        {
+          "name": "Ascend_Small_Block_for_robot_interaction",
+          "description": "The robot walks to the Small Block for robot interaction and jumps onto its top surface.",
+          "children": [
+            {
+              "name": "walk_to_Small_Block_for_robot_interaction_for_climb",
+              "description": "The robot walks to a position suitable for jumping onto the Small Block for robot interaction. Goal state: Robot is positioned directly in front of the Small Block for robot interaction, ready to jump."
+            },
+            {
+              "name": "jump_onto_Small_Block_for_robot_interaction",
+              "description": "The robot performs a jump to land on top of the Small Block for robot interaction. Goal state: Robot is standing stably on top of the Small Block for robot interaction."
+            }
+          ]
+        },
+        {
+          "name": "Ascend_Medium_Block_for_robot_interaction",
+          "description": "The robot walks from the Small Block to the Medium Block and jumps onto its top surface.",
+          "children": [
+            {
+              "name": "walk_to_Medium_Block_for_robot_interaction_for_climb",
+              "description": "The robot walks from its current position (on or near the Small Block) to a position suitable for jumping onto the Medium Block for robot interaction. Goal state: Robot is positioned directly in front of the Medium Block for robot interaction, ready to jump."
+            },
+            {
+              "name": "jump_onto_Medium_Block_for_robot_interaction",
+              "description": "The robot performs a jump to land on top of the Medium Block for robot interaction. Goal state: Robot is standing stably on top of the Medium Block for robot interaction."
+            }
+          ]
+        },
+        {
+          "name": "Ascend_Large_Block_for_robot_interaction",
+          "description": "The robot walks from the Medium Block to the Large Block and jumps onto its top surface.",
+          "children": [
+            {
+              "name": "walk_to_Large_Block_for_robot_interaction_for_climb",
+              "description": "The robot walks from its current position (on or near the Medium Block) to a position suitable for jumping onto the Large Block for robot interaction. Goal state: Robot is positioned directly in front of the Large Block for robot interaction, ready to jump."
+            },
+            {
+              "name": "jump_onto_Large_Block_for_robot_interaction",
+              "description": "The robot performs a jump to land on top of the Large Block for robot interaction. Goal state: Robot is standing stably on top of the Large Block for robot interaction, completing the climb."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

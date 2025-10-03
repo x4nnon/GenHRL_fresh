@@ -1,0 +1,134 @@
+{
+  "_comment": "Scene with two rectangular blocks, a diving board platform, a cone, and a swimming pool for the robot to interact with.",
+  "num_spheres": 0,
+  "_sphere_comments": [],
+  "mass_spheres": [],
+  "position_spheres": [],
+  "rotation_spheres": [],
+  "radius_spheres": [],
+  "num_cubes": 4,
+  "_cube_comments": [
+    "Rectangular Block 1 (Lower Step) for the robot to walk up",
+    "Rectangular Block 2 (Higher Step) for the robot to walk up to the diving board",
+    "Rectangular Platform (Diving Board) for the robot to walk on and dive from",
+    "Rectangular Plane (Swimming Pool) for the robot to dive into and 'swim'"
+  ],
+  "mass_cubes": [
+    1500.0,
+    2900.0,
+    1500.0,
+    1000.0
+  ],
+  "position_cubes": [
+    [
+      1.0,
+      0.0,
+      0.15
+    ],
+    [
+      2.5,
+      0.0,
+      0.3
+    ],
+    [
+      3.5,
+      0.0,
+      0.65
+    ],
+    [
+      6.5,
+      0.0,
+      0.005
+    ]
+  ],
+  "rotation_cubes": [
+    [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  ],
+  "size_cubes": [
+    [
+      1.0,
+      2.0,
+      0.3
+    ],
+    [
+      1.0,
+      2.0,
+      0.6
+    ],
+    [
+      3.0,
+      0.5,
+      0.1
+    ],
+    [
+      4.0,
+      4.0,
+      0.01
+    ]
+  ],
+  "num_cylinders": 0,
+  "_cylinder_comments": [],
+  "mass_cylinders": [],
+  "position_cylinders": [],
+  "rotation_cylinders": [],
+  "radius_cylinders": [],
+  "height_cylinders": [],
+  "num_cones": 1,
+  "_cone_comments": [
+    "Cylinder (Cone) to be kicked by the robot into the pool"
+  ],
+  "mass_cones": [
+    0.1
+  ],
+  "position_cones": [
+    [
+      5.3,
+      0.0,
+      0.75
+    ]
+  ],
+  "rotation_cones": [
+    [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  ],
+  "radius_cones": [
+    0.1
+  ],
+  "height_cones": [
+    0.2
+  ],
+  "num_capsules": 0,
+  "_capsule_comments": [],
+  "mass_capsules": [],
+  "position_capsules": [],
+  "rotation_capsules": [],
+  "radius_capsules": [],
+  "height_capsules": []
+}

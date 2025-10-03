@@ -1,0 +1,113 @@
+{
+  "_comment": "Scene with three 0.5m cubes arranged in a triangle and a 2m x 2m platform for the robot to push the cubes onto.",
+  "num_spheres": 0,
+  "_sphere_comments": [],
+  "mass_spheres": [],
+  "position_spheres": [],
+  "rotation_spheres": [],
+  "radius_spheres": [],
+  "num_cubes": 4,
+  "_cube_comments": [
+    "First 0.5m cubed block, part of the triangle arrangement.",
+    "Second 0.5m cubed block, part of the triangle arrangement.",
+    "Third 0.5m cubed block, part of the triangle arrangement.",
+    "Platform for the cubes to be pushed onto."
+  ],
+  "mass_cubes": [
+    80.0,
+    80.0,
+    80.0,
+    30.0
+  ],
+  "position_cubes": [
+    [
+      2.0,
+      -0.2887,
+      0.25
+    ],
+    [
+      2.0,
+      0.2887,
+      0.25
+    ],
+    [
+      2.866,
+      0.0,
+      0.25
+    ],
+    [
+      6.866,
+      0.0,
+      0.0005
+    ]
+  ],
+  "rotation_cubes": [
+    [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  ],
+  "size_cubes": [
+    [
+      0.5,
+      0.5,
+      0.5
+    ],
+    [
+      0.5,
+      0.5,
+      0.5
+    ],
+    [
+      0.5,
+      0.5,
+      0.5
+    ],
+    [
+      2.0,
+      2.0,
+      0.001
+    ]
+  ],
+  "num_cylinders": 0,
+  "_cylinder_comments": [],
+  "mass_cylinders": [],
+  "position_cylinders": [],
+  "rotation_cylinders": [],
+  "radius_cylinders": [],
+  "height_cylinders": [],
+  "num_cones": 0,
+  "_cone_comments": [],
+  "mass_cones": [],
+  "position_cones": [],
+  "rotation_cones": [],
+  "radius_cones": [],
+  "height_cones": [],
+  "num_capsules": 0,
+  "_capsule_comments": [],
+  "mass_capsules": [],
+  "position_capsules": [],
+  "rotation_capsules": [],
+  "radius_capsules": [],
+  "height_capsules": []
+}

@@ -1,0 +1,8 @@
+The environment should have two rectangualr blocks. one 0.3m high and another 0.6m high. 
+                these should be 2m wide. They should be positioned next to each other so the robot can walk up them. 
+                There should then be a 'diving board' platform which is balanced on the top block, 
+                this should be balance well and heavy enough (very heavy) such that the robot can walk on it without it's COM moving much.
+                The robot should walk up the blocks and along the platform. At the end of the platform there should be a small cone balanced.
+                the robot should kick this small cone into the 'pool'. The robot must then perform a diving motion onto a 'swimming pool'.
+                the swimming pool can be represented by a 0.01m height and 4mx4m square. positioned correctly. The robot should then act like it is swimming.
+                The end state should have the cone in the pool and the robot should be swimming.

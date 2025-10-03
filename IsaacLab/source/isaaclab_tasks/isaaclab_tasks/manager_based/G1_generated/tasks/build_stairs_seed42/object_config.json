@@ -1,0 +1,95 @@
+{
+  "_comment": "Scene with three blocks (small, medium, large) positioned in a triangle around the origin for a robot to push and climb.",
+  "num_spheres": 0,
+  "_sphere_comments": [],
+  "mass_spheres": [],
+  "position_spheres": [],
+  "rotation_spheres": [],
+  "radius_spheres": [],
+  "num_cubes": 3,
+  "_cube_comments": [
+    "Small Block for robot interaction",
+    "Medium Block for robot interaction",
+    "Large Block for robot interaction"
+  ],
+  "mass_cubes": [
+    10.0,
+    10.0,
+    10.0
+  ],
+  "position_cubes": [
+    [
+      4.0,
+      0.0,
+      0.15
+    ],
+    [
+      -2.0,
+      3.464,
+      0.3
+    ],
+    [
+      -2.0,
+      -3.464,
+      0.45
+    ]
+  ],
+  "rotation_cubes": [
+    [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  ],
+  "size_cubes": [
+    [
+      1.0,
+      1.0,
+      0.3
+    ],
+    [
+      1.0,
+      1.0,
+      0.6
+    ],
+    [
+      1.0,
+      1.0,
+      0.9
+    ]
+  ],
+  "num_cylinders": 0,
+  "_cylinder_comments": [],
+  "mass_cylinders": [],
+  "position_cylinders": [],
+  "rotation_cylinders": [],
+  "radius_cylinders": [],
+  "height_cylinders": [],
+  "num_cones": 0,
+  "_cone_comments": [],
+  "mass_cones": [],
+  "position_cones": [],
+  "rotation_cones": [],
+  "radius_cones": [],
+  "height_cones": [],
+  "num_capsules": 0,
+  "_capsule_comments": [],
+  "mass_capsules": [],
+  "position_capsules": [],
+  "rotation_capsules": [],
+  "radius_capsules": [],
+  "height_capsules": []
+}

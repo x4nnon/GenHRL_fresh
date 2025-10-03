@@ -1,0 +1,95 @@
+{
+  "_comment": "Scene consists of two heavy cubes forming a doorway and a small block beyond it.",
+  "num_spheres": 0,
+  "_sphere_comments": [],
+  "mass_spheres": [],
+  "position_spheres": [],
+  "rotation_spheres": [],
+  "radius_spheres": [],
+  "num_cubes": 3,
+  "_cube_comments": [
+    "Heavy Cube (Wall 1) forming the left wall of the doorway",
+    "Heavy Cube (Wall 2) forming the right wall of the doorway",
+    "Small Block for the robot to walk to"
+  ],
+  "mass_cubes": [
+    1000.0,
+    1000.0,
+    1.0
+  ],
+  "position_cubes": [
+    [
+      3.0,
+      -2.8,
+      0.75
+    ],
+    [
+      3.0,
+      2.8,
+      0.75
+    ],
+    [
+      5.5,
+      -3.0,
+      0.15
+    ]
+  ],
+  "rotation_cubes": [
+    [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  ],
+  "size_cubes": [
+    [
+      0.5,
+      5.0,
+      1.5
+    ],
+    [
+      0.5,
+      5.0,
+      1.5
+    ],
+    [
+      0.3,
+      0.3,
+      0.3
+    ]
+  ],
+  "num_cylinders": 0,
+  "_cylinder_comments": [],
+  "mass_cylinders": [],
+  "position_cylinders": [],
+  "rotation_cylinders": [],
+  "radius_cylinders": [],
+  "height_cylinders": [],
+  "num_cones": 0,
+  "_cone_comments": [],
+  "mass_cones": [],
+  "position_cones": [],
+  "rotation_cones": [],
+  "radius_cones": [],
+  "height_cones": [],
+  "num_capsules": 0,
+  "_capsule_comments": [],
+  "mass_capsules": [],
+  "position_capsules": [],
+  "rotation_capsules": [],
+  "radius_capsules": [],
+  "height_capsules": []
+}

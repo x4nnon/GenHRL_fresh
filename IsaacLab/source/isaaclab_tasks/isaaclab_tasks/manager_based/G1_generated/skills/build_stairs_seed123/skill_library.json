@@ -1,0 +1,286 @@
+{
+    "skills": {
+        "build_stairs_seed123": {
+            "task_path": "skills/build_stairs_seed123",
+            "policy_path": "trained_policies/build_stairs_seed123.pt",
+            "description": "The robot should build stairs using three blocks and then climb them.",
+            "object_config_paths": [
+                "../object_config.json"
+            ],
+            "is_primitive": false,
+            "sub_skills": [
+                "Build_Stairs",
+                "Climb_Stairs"
+            ],
+            "used_by": []
+        },
+        "Build_Stairs": {
+            "task_path": "skills/Build_Stairs",
+            "policy_path": "trained_policies/Build_Stairs.pt",
+            "description": "Arrange the three blocks (Small, Medium, Large) into a stair-like configuration.",
+            "object_config_paths": [
+                "../object_config.json"
+            ],
+            "is_primitive": false,
+            "sub_skills": [
+                "walk_to_Large_Block_for_push",
+                "push_Large_Block_into_stair_base_position",
+                "walk_to_Medium_Block_for_push",
+                "push_Medium_Block_into_stair_middle_position",
+                "walk_to_Small_Block_for_push",
+                "push_Small_Block_into_stair_top_position"
+            ],
+            "used_by": [
+                "build_stairs_seed123"
+            ]
+        },
+        "walk_to_Large_Block_for_push": {
+            "task_path": "skills/walk_to_Large_Block_for_push",
+            "policy_path": "trained_policies/walk_to_Large_Block_for_push.pt",
+            "description": "The robot should walk to a position near the Large Block (Object3) to prepare for pushing it. The goal state is for the robot to be in a stable standing position adjacent to the Large Block, ready to initiate a push.",
+            "object_config_paths": [
+                "../object_config.json"
+            ],
+            "is_primitive": true,
+            "sub_skills": [],
+            "used_by": [
+                "Build_Stairs"
+            ]
+        },
+        "push_Large_Block_into_stair_base_position": {
+            "task_path": "skills/push_Large_Block_into_stair_base_position",
+            "policy_path": "trained_policies/push_Large_Block_into_stair_base_position.pt",
+            "description": "The robot should push the Large Block (Object3) from its initial position to a designated base position for the stairs. The goal state is for the Large Block to be in its final, stable base position, forming the lowest step of the stairs, and the robot to be in a stable standing position after the push.",
+            "object_config_paths": [
+                "../object_config.json"
+            ],
+            "is_primitive": true,
+            "sub_skills": [],
+            "used_by": [
+                "Build_Stairs"
+            ]
+        },
+        "walk_to_Medium_Block_for_push": {
+            "task_path": "skills/walk_to_Medium_Block_for_push",
+            "policy_path": "trained_policies/walk_to_Medium_Block_for_push.pt",
+            "description": "The robot should walk to a position near the Medium Block (Object2) to prepare for pushing it. The goal state is for the robot to be in a stable standing position adjacent to the Medium Block, ready to initiate a push.",
+            "object_config_paths": [
+                "../object_config.json"
+            ],
+            "is_primitive": true,
+            "sub_skills": [],
+            "used_by": [
+                "Build_Stairs"
+            ]
+        },
+        "push_Medium_Block_into_stair_middle_position": {
+            "task_path": "skills/push_Medium_Block_into_stair_middle_position",
+            "policy_path": "trained_policies/push_Medium_Block_into_stair_middle_position.pt",
+            "description": "The robot should push the Medium Block (Object2) from its initial position to a designated middle position, adjacent to the Large Block (Object3), forming the second step. The goal state is for the Medium Block to be in its final, stable middle position, and the robot to be in a stable standing position after the push.",
+            "object_config_paths": [
+                "../object_config.json"
+            ],
+            "is_primitive": true,
+            "sub_skills": [],
+            "used_by": [
+                "Build_Stairs"
+            ]
+        },
+        "walk_to_Small_Block_for_push": {
+            "task_path": "skills/walk_to_Small_Block_for_push",
+            "policy_path": "trained_policies/walk_to_Small_Block_for_push.pt",
+            "description": "The robot should walk to a position near the Small Block (Object1) to prepare for pushing it. The goal state is for the robot to be in a stable standing position adjacent to the Small Block, ready to initiate a push.",
+            "object_config_paths": [
+                "../object_config.json"
+            ],
+            "is_primitive": true,
+            "sub_skills": [],
+            "used_by": [
+                "Build_Stairs"
+            ]
+        },
+        "push_Small_Block_into_stair_top_position": {
+            "task_path": "skills/push_Small_Block_into_stair_top_position",
+            "policy_path": "trained_policies/push_Small_Block_into_stair_top_position.pt",
+            "description": "The robot should push the Small Block (Object1) from its initial position to a designated top position, adjacent to the Medium Block (Object2), completing the stair structure. The goal state is for the Small Block to be in its final, stable top position, and the robot to be in a stable standing position after the push.",
+            "object_config_paths": [
+                "../object_config.json"
+            ],
+            "is_primitive": true,
+            "sub_skills": [],
+            "used_by": [
+                "Build_Stairs"
+            ]
+        },
+        "Climb_Stairs": {
+            "task_path": "skills/Climb_Stairs",
+            "policy_path": "trained_policies/Climb_Stairs.pt",
+            "description": "Ascend the newly built stairs by jumping onto each block in sequence.",
+            "object_config_paths": [
+                "../object_config.json"
+            ],
+            "is_primitive": false,
+            "sub_skills": [
+                "walk_to_Large_Block_for_climb",
+                "jump_onto_Large_Block",
+                "walk_to_Medium_Block_for_climb",
+                "jump_onto_Medium_Block",
+                "walk_to_Small_Block_for_climb",
+                "jump_onto_Small_Block"
+            ],
+            "used_by": [
+                "build_stairs_seed123"
+            ]
+        },
+        "walk_to_Large_Block_for_climb": {
+            "task_path": "skills/walk_to_Large_Block_for_climb",
+            "policy_path": "trained_policies/walk_to_Large_Block_for_climb.pt",
+            "description": "The robot should walk to a position near the Large Block (Object3), which is the lowest step of the built stairs. The goal state is for the robot to be in a stable standing position in front of the Large Block, ready to jump onto it.",
+            "object_config_paths": [
+                "../object_config.json"
+            ],
+            "is_primitive": true,
+            "sub_skills": [],
+            "used_by": [
+                "Climb_Stairs"
+            ]
+        },
+        "jump_onto_Large_Block": {
+            "task_path": "skills/jump_onto_Large_Block",
+            "policy_path": "trained_policies/jump_onto_Large_Block.pt",
+            "description": "The robot should jump onto the top surface of the Large Block (Object3). The goal state is for the robot to be standing stably on top of the Large Block.",
+            "object_config_paths": [
+                "../object_config.json"
+            ],
+            "is_primitive": true,
+            "sub_skills": [],
+            "used_by": [
+                "Climb_Stairs"
+            ]
+        },
+        "walk_to_Medium_Block_for_climb": {
+            "task_path": "skills/walk_to_Medium_Block_for_climb",
+            "policy_path": "trained_policies/walk_to_Medium_Block_for_climb.pt",
+            "description": "The robot should walk from the Large Block (Object3) to a position near the Medium Block (Object2), which is the next step. The goal state is for the robot to be in a stable standing position in front of the Medium Block, ready to jump onto it.",
+            "object_config_paths": [
+                "../object_config.json"
+            ],
+            "is_primitive": true,
+            "sub_skills": [],
+            "used_by": [
+                "Climb_Stairs"
+            ]
+        },
+        "jump_onto_Medium_Block": {
+            "task_path": "skills/jump_onto_Medium_Block",
+            "policy_path": "trained_policies/jump_onto_Medium_Block.pt",
+            "description": "The robot should jump onto the top surface of the Medium Block (Object2). The goal state is for the robot to be standing stably on top of the Medium Block.",
+            "object_config_paths": [
+                "../object_config.json"
+            ],
+            "is_primitive": true,
+            "sub_skills": [],
+            "used_by": [
+                "Climb_Stairs"
+            ]
+        },
+        "walk_to_Small_Block_for_climb": {
+            "task_path": "skills/walk_to_Small_Block_for_climb",
+            "policy_path": "trained_policies/walk_to_Small_Block_for_climb.pt",
+            "description": "The robot should walk from the Medium Block (Object2) to a position near the Small Block (Object1), which is the final step. The goal state is for the robot to be in a stable standing position in front of the Small Block, ready to jump onto it.",
+            "object_config_paths": [
+                "../object_config.json"
+            ],
+            "is_primitive": true,
+            "sub_skills": [],
+            "used_by": [
+                "Climb_Stairs"
+            ]
+        },
+        "jump_onto_Small_Block": {
+            "task_path": "skills/jump_onto_Small_Block",
+            "policy_path": "trained_policies/jump_onto_Small_Block.pt",
+            "description": "The robot should jump onto the top surface of the Small Block (Object1). The goal state is for the robot to be standing stably on top of the Small Block, having successfully climbed the stairs.",
+            "object_config_paths": [
+                "../object_config.json"
+            ],
+            "is_primitive": true,
+            "sub_skills": [],
+            "used_by": [
+                "Climb_Stairs"
+            ]
+        }
+    },
+    "hierarchies": {
+        "build_stairs_seed123": {
+            "created_at": "2025-08-05T12:59:14.719388",
+            "description": "Environment set-up description: The environment should have three objects in it. A small block measuring x=1m y=1m and z=0.3m. A medium block measuring x=1m y=1m and z=0.6m. A large block measuring x=1m y=1m and z=0.9m. These blocks should be positioned in a triangle each 4m from the origin (0,0,0) which is also where the robot will be.\n        \n        Robot task description: The robot should  should walk to each of the blocks in turn and push them into a sensible place near the other blocks such that it forms something resembling stairs.\n         Once the robot has built the stairs then it should jump onto each in turn so that it climbs the stairs.",
+            "structure": {
+                "name": "build_stairs_seed123",
+                "description": "The robot should build stairs using three blocks and then climb them.",
+                "children": [
+                    {
+                        "name": "Build_Stairs",
+                        "description": "Arrange the three blocks (Small, Medium, Large) into a stair-like configuration.",
+                        "children": [
+                            {
+                                "name": "walk_to_Large_Block_for_push",
+                                "description": "The robot should walk to a position near the Large Block (Object3) to prepare for pushing it. The goal state is for the robot to be in a stable standing position adjacent to the Large Block, ready to initiate a push."
+                            },
+                            {
+                                "name": "push_Large_Block_into_stair_base_position",
+                                "description": "The robot should push the Large Block (Object3) from its initial position to a designated base position for the stairs. The goal state is for the Large Block to be in its final, stable base position, forming the lowest step of the stairs, and the robot to be in a stable standing position after the push."
+                            },
+                            {
+                                "name": "walk_to_Medium_Block_for_push",
+                                "description": "The robot should walk to a position near the Medium Block (Object2) to prepare for pushing it. The goal state is for the robot to be in a stable standing position adjacent to the Medium Block, ready to initiate a push."
+                            },
+                            {
+                                "name": "push_Medium_Block_into_stair_middle_position",
+                                "description": "The robot should push the Medium Block (Object2) from its initial position to a designated middle position, adjacent to the Large Block (Object3), forming the second step. The goal state is for the Medium Block to be in its final, stable middle position, and the robot to be in a stable standing position after the push."
+                            },
+                            {
+                                "name": "walk_to_Small_Block_for_push",
+                                "description": "The robot should walk to a position near the Small Block (Object1) to prepare for pushing it. The goal state is for the robot to be in a stable standing position adjacent to the Small Block, ready to initiate a push."
+                            },
+                            {
+                                "name": "push_Small_Block_into_stair_top_position",
+                                "description": "The robot should push the Small Block (Object1) from its initial position to a designated top position, adjacent to the Medium Block (Object2), completing the stair structure. The goal state is for the Small Block to be in its final, stable top position, and the robot to be in a stable standing position after the push."
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Climb_Stairs",
+                        "description": "Ascend the newly built stairs by jumping onto each block in sequence.",
+                        "children": [
+                            {
+                                "name": "walk_to_Large_Block_for_climb",
+                                "description": "The robot should walk to a position near the Large Block (Object3), which is the lowest step of the built stairs. The goal state is for the robot to be in a stable standing position in front of the Large Block, ready to jump onto it."
+                            },
+                            {
+                                "name": "jump_onto_Large_Block",
+                                "description": "The robot should jump onto the top surface of the Large Block (Object3). The goal state is for the robot to be standing stably on top of the Large Block."
+                            },
+                            {
+                                "name": "walk_to_Medium_Block_for_climb",
+                                "description": "The robot should walk from the Large Block (Object3) to a position near the Medium Block (Object2), which is the next step. The goal state is for the robot to be in a stable standing position in front of the Medium Block, ready to jump onto it."
+                            },
+                            {
+                                "name": "jump_onto_Medium_Block",
+                                "description": "The robot should jump onto the top surface of the Medium Block (Object2). The goal state is for the robot to be standing stably on top of the Medium Block."
+                            },
+                            {
+                                "name": "walk_to_Small_Block_for_climb",
+                                "description": "The robot should walk from the Medium Block (Object2) to a position near the Small Block (Object1), which is the final step. The goal state is for the robot to be in a stable standing position in front of the Small Block, ready to jump onto it."
+                            },
+                            {
+                                "name": "jump_onto_Small_Block",
+                                "description": "The robot should jump onto the top surface of the Small Block (Object1). The goal state is for the robot to be standing stably on top of the Small Block, having successfully climbed the stairs."
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    }
+}

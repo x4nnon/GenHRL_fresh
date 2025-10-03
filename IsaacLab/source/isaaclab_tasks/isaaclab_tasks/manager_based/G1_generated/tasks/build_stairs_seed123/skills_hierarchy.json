@@ -1,0 +1,66 @@
+{
+  "name": "build_stairs_seed123",
+  "description": "The robot should build stairs using three blocks and then climb them.",
+  "children": [
+    {
+      "name": "Build_Stairs",
+      "description": "Arrange the three blocks (Small, Medium, Large) into a stair-like configuration.",
+      "children": [
+        {
+          "name": "walk_to_Large_Block_for_push",
+          "description": "The robot should walk to a position near the Large Block (Object3) to prepare for pushing it. The goal state is for the robot to be in a stable standing position adjacent to the Large Block, ready to initiate a push."
+        },
+        {
+          "name": "push_Large_Block_into_stair_base_position",
+          "description": "The robot should push the Large Block (Object3) from its initial position to a designated base position for the stairs. The goal state is for the Large Block to be in its final, stable base position, forming the lowest step of the stairs, and the robot to be in a stable standing position after the push."
+        },
+        {
+          "name": "walk_to_Medium_Block_for_push",
+          "description": "The robot should walk to a position near the Medium Block (Object2) to prepare for pushing it. The goal state is for the robot to be in a stable standing position adjacent to the Medium Block, ready to initiate a push."
+        },
+        {
+          "name": "push_Medium_Block_into_stair_middle_position",
+          "description": "The robot should push the Medium Block (Object2) from its initial position to a designated middle position, adjacent to the Large Block (Object3), forming the second step. The goal state is for the Medium Block to be in its final, stable middle position, and the robot to be in a stable standing position after the push."
+        },
+        {
+          "name": "walk_to_Small_Block_for_push",
+          "description": "The robot should walk to a position near the Small Block (Object1) to prepare for pushing it. The goal state is for the robot to be in a stable standing position adjacent to the Small Block, ready to initiate a push."
+        },
+        {
+          "name": "push_Small_Block_into_stair_top_position",
+          "description": "The robot should push the Small Block (Object1) from its initial position to a designated top position, adjacent to the Medium Block (Object2), completing the stair structure. The goal state is for the Small Block to be in its final, stable top position, and the robot to be in a stable standing position after the push."
+        }
+      ]
+    },
+    {
+      "name": "Climb_Stairs",
+      "description": "Ascend the newly built stairs by jumping onto each block in sequence.",
+      "children": [
+        {
+          "name": "walk_to_Large_Block_for_climb",
+          "description": "The robot should walk to a position near the Large Block (Object3), which is the lowest step of the built stairs. The goal state is for the robot to be in a stable standing position in front of the Large Block, ready to jump onto it."
+        },
+        {
+          "name": "jump_onto_Large_Block",
+          "description": "The robot should jump onto the top surface of the Large Block (Object3). The goal state is for the robot to be standing stably on top of the Large Block."
+        },
+        {
+          "name": "walk_to_Medium_Block_for_climb",
+          "description": "The robot should walk from the Large Block (Object3) to a position near the Medium Block (Object2), which is the next step. The goal state is for the robot to be in a stable standing position in front of the Medium Block, ready to jump onto it."
+        },
+        {
+          "name": "jump_onto_Medium_Block",
+          "description": "The robot should jump onto the top surface of the Medium Block (Object2). The goal state is for the robot to be standing stably on top of the Medium Block."
+        },
+        {
+          "name": "walk_to_Small_Block_for_climb",
+          "description": "The robot should walk from the Medium Block (Object2) to a position near the Small Block (Object1), which is the final step. The goal state is for the robot to be in a stable standing position in front of the Small Block, ready to jump onto it."
+        },
+        {
+          "name": "jump_onto_Small_Block",
+          "description": "The robot should jump onto the top surface of the Small Block (Object1). The goal state is for the robot to be standing stably on top of the Small Block, having successfully climbed the stairs."
+        }
+      ]
+    }
+  ]
+}

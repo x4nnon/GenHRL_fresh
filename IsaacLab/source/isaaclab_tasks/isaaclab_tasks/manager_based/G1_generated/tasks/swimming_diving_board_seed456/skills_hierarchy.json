@@ -1,0 +1,7 @@
+{
+  "name": "swimming_diving_board_seed456",
+  "description": "The robot should first walk up the Block_Low, then proceed to walk up the Block_High. After reaching the top of the Block_High, the robot should walk onto the DivingBoard and continue walking along its length to the end. At the end of the DivingBoard, the robot must kick the Cone_Small into the SwimmingPool. Following this, the robot should perform a diving motion into the SwimmingPool and then act as if it is swimming within the SwimmingPool. The final state requires the Cone_Small to be inside the SwimmingPool and the robot to be performing a swimming motion.",
+  "object_config_paths": [
+    "/home/tomcannon/Documents/GenHRL_v2/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/manager_based/G1_generated/skills/swimming_diving_board_seed456/object_config.json"
+  ]
+}

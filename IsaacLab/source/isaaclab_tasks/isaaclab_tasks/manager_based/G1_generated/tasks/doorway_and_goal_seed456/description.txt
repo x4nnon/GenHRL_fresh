@@ -1,0 +1,4 @@
+ Environment set-up description: The environment should consist of three objects. Two of these objects should be very heavy (1000kg) cubes with a z of 1.5m x of 0.5 and a y of 5m. These form the 'walls' and they should be positioned such that there is a doorway gap of 0.5m. I.e the y centre of both objects should be 5.5m apart. which would leave a 0.5m gap. The third object should be a small block of 0.3m cubed. This should be positioned 2m past the doorway in the y axis and 3m down in the y axis.
+
+        Robot task description: The robot should walk through the doorway and then walk to the small block.
+                

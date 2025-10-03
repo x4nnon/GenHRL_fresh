@@ -1,0 +1,38 @@
+{
+  "name": "doorway_and_goal_seed123",
+  "description": "The robot should walk through the doorway and then walk to the small block.",
+  "children": [
+    {
+      "name": "navigate_through_doorway",
+      "description": "Guide the robot through the doorway formed by Heavy Cube (Wall 1) and Heavy Cube (Wall 2).",
+      "children": [
+        {
+          "name": "walk_to_doorway_entrance",
+          "description": "The robot should walk to a position just before the doorway, centered between Heavy Cube (Wall 1) and Heavy Cube (Wall 2), ready to pass through. The goal state is for the robot to be positioned directly in front of the doorway opening, facing through it, allowing for a direct forward movement into the doorway."
+        },
+        {
+          "name": "walk_through_doorway",
+          "description": "The robot should walk forward, passing between Heavy Cube (Wall 1) and Heavy Cube (Wall 2). The goal state is for the robot's main body to have passed the plane of the doorway, but it might not be fully clear of the doorway's immediate vicinity."
+        },
+        {
+          "name": "walk_clear_of_doorway",
+          "description": "The robot should continue walking forward until it is completely past the doorway, ensuring no part of its body is obstructed by Heavy Cube (Wall 1) or Heavy Cube (Wall 2). The goal state is for the robot to be fully past the doorway, in a stable standing position on the other side, ready to proceed to the next objective."
+        }
+      ]
+    },
+    {
+      "name": "approach_goal_block",
+      "description": "Guide the robot to the Small Block for the robot to walk to after passing the doorway.",
+      "children": [
+        {
+          "name": "walk_towards_Small_Block",
+          "description": "The robot should walk in the general direction of the Small Block for the robot to walk to. The goal state is for the robot to be within a reasonable proximity to the Small Block, facing it, and ready for the final approach."
+        },
+        {
+          "name": "walk_to_Small_Block",
+          "description": "The robot should walk directly to the Small Block for the robot to walk to, ending its movement when it reaches the block's immediate vicinity. The goal state is for the robot to be standing next to the Small Block, indicating the completion of the task."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+seed: 42
+
+
+models:
+  separate: False
+  policy:  # L1 policy selects discrete L0 skills
+    class: CategoricalMixin
+    initial_log_std: 0.0
+    network:
+      - name: net
+        input: STATES
+        layers: [512, 512, 256, 2]  # Larger network for hierarchical decisions
+        activations: elu
+        dropout: 0.1  # Add dropout for better generalization
+    output: ACTIONS
+  value:  # L1 value function predicts hierarchical returns (10-100 steps)
+    class: DeterministicMixin
+    clip_actions: False
+    network:
+      - name: net
+        input: STATES
+        layers: [512, 512, 256, 2]  # Larger capacity for longer-horizon value estimation
+        activations: elu
+        dropout: 0.1
+        # Add temporal scale encoding
+      - name: temporal_encoding
+        input: net
+        layers: [512, 512, 256, 2]  # Dedicated layer to encode temporal scale information
+        activations: relu
+    output: ONE
+
+
+memory:
+  class: DecisionPointMemory
+  memory_size: -1  # automatically determined
+  hierarchy_level: 1
+  skill_reward_discount: 0.99  # Discount within skill execution
+  debug_mode: true
+  gae_lambda: 0.95
+  temporal_abstraction_method: "discounted_sum"
+
+
+agent:
+  class: HPPO  # Use hierarchical PPO
+  rollouts: 600
+  learning_epochs: 8  # More epochs for stability with hierarchical data
+  mini_batches: 20
+  discount_factor: 0.9  # Main discount between L1 decisions
+  lambda: 0.95  # GAE lambda for advantage estimation
+  skill_reward_discount: 0.99  # NEW: Discount for reward accumulation during skill execution
+  
+  # Learning rates optimized for hierarchical learning
+  learning_rate: 5.0e-04  # Lower LR for stability with accumulated rewards
+  learning_rate_scheduler: KLAdaptiveLR
+  learning_rate_scheduler_kwargs:
+    kl_threshold: 0.02  # Tighter KL threshold for stability
+    min_lr: 5.0e-05
+    max_lr: 3.0e-04
+    
+  # Clipping parameters adjusted for hierarchical scale
+  grad_norm_clip: 0.8  # Slightly lower for stability
+  ratio_clip: 0.15  # More conservative clipping for hierarchical learning
+  value_clip: 0.3  # Higher value clipping due to larger value scales
+  clip_predicted_values: True
+  
+  # Loss scaling adjusted for hierarchical returns
+  entropy_loss_scale: 0.005  # Higher entropy for exploration of skill selection
+  value_loss_scale: 1.5  # Higher value loss weight due to importance of hierarchical value estimation
+  
+  kl_threshold: 0.02
+  rewards_shaper_scale: 1.0
+  time_limit_bootstrap: True  # Important for hierarchical learning
+  
+  # Hierarchical specific config
+  debug_mode: true
+
+  # logging and checkpoint
+  experiment:
+    directory: "jump_over_lowwall"
+    experiment_name: ""
+    write_interval: auto
+    checkpoint_interval: auto
+    wandb: true
+    wandb_kwargs:
+      project: "build_stairs_seed42"
+      name: "build_stairs_seed42"
+  sub_policies: ["path_to_sub_policy_1", "path_to_sub_policy_2", "path_to_sub_policy_3"]
+  rollouts_per_sub_policy: 50 # corresponds to half a second of rollouts.
+    
+
+# Sequential trainer
+# https://skrl.readthedocs.io/en/latest/api/trainers/sequential.html
+trainer:
+  class: SequentialTrainer
+  timesteps: 100_000
+  environment_info: log

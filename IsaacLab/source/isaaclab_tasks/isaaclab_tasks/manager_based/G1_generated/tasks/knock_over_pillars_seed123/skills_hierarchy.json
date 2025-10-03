@@ -1,0 +1,7 @@
+{
+  "name": "knock_over_all_cylinder_columns",
+  "description": "The robot should sequentially approach each of the five cylinder columns, walk to them, and then apply force to knock each one over until it is lying on the floor. This process should be repeated for all five columns.",
+  "object_config_paths": [
+    "/home/tomcannon/Documents/GenHRL_v2/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/manager_based/G1_generated/skills/knock_over_pillars_seed123/object_config.json"
+  ]
+}

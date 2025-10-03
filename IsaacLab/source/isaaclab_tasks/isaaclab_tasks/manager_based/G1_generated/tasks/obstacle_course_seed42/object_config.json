@@ -1,0 +1,128 @@
+{
+  "_comment": "Scene configured with five objects in a line along the x-axis for an obstacle course.",
+  "num_spheres": 2,
+  "_sphere_comments": [
+    "Large sphere for robot to push",
+    "Small sphere for robot to kick"
+  ],
+  "mass_spheres": [
+    100.0,
+    1.0
+  ],
+  "position_spheres": [
+    [
+      7.3,
+      0.0,
+      1.0
+    ],
+    [
+      15.6,
+      0.0,
+      0.2
+    ]
+  ],
+  "rotation_spheres": [
+    [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  ],
+  "radius_spheres": [
+    1.0,
+    0.2
+  ],
+  "num_cubes": 3,
+  "_cube_comments": [
+    "Low wall for robot to jump over",
+    "High wall to be pushed over by large sphere",
+    "Block cube for robot to jump on top of"
+  ],
+  "mass_cubes": [
+    200.0,
+    300.0,
+    25.0
+  ],
+  "position_cubes": [
+    [
+      3.15,
+      0.0,
+      0.25
+    ],
+    [
+      11.45,
+      0.0,
+      0.5
+    ],
+    [
+      19.85,
+      0.0,
+      0.25
+    ]
+  ],
+  "rotation_cubes": [
+    [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  ],
+  "size_cubes": [
+    [
+      0.3,
+      5.0,
+      0.5
+    ],
+    [
+      0.3,
+      5.0,
+      1.0
+    ],
+    [
+      0.5,
+      0.5,
+      0.5
+    ]
+  ],
+  "num_cylinders": 0,
+  "_cylinder_comments": [],
+  "mass_cylinders": [],
+  "position_cylinders": [],
+  "rotation_cylinders": [],
+  "radius_cylinders": [],
+  "height_cylinders": [],
+  "num_cones": 0,
+  "_cone_comments": [],
+  "mass_cones": [],
+  "position_cones": [],
+  "rotation_cones": [],
+  "radius_cones": [],
+  "height_cones": [],
+  "num_capsules": 0,
+  "_capsule_comments": [],
+  "mass_capsules": [],
+  "position_capsules": [],
+  "rotation_capsules": [],
+  "radius_capsules": [],
+  "height_capsules": []
+}

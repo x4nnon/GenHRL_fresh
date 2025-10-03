@@ -1,0 +1,30 @@
+{
+  "name": "doorway_and_goal_seed456",
+  "description": "The robot should walk through the doorway formed by two heavy cubes and then walk to the small block.",
+  "children": [
+    {
+      "name": "navigate_through_doorway",
+      "description": "The robot should approach the doorway formed by Heavy Cube (Wall 1) and Heavy Cube (Wall 2), align itself, and walk completely through it.",
+      "children": [
+        {
+          "name": "approach_doorway",
+          "description": "The robot should walk towards the general area of the doorway formed by Heavy Cube (Wall 1) and Heavy Cube (Wall 2) and position its body to be centered between Heavy Cube (Wall 1) and Heavy Cube (Wall 2) and oriented to walk straight through the doorway. The goal state is for the robot's body to be centered between Heavy Cube (Wall 1) and Heavy Cube (Wall 2) and oriented to walk straight through the doorway, in a stable position."
+        },
+        {
+          "name": "walk_through_doorway",
+          "description": "The robot should walk forward from its aligned position and pass completely through the doorway formed by Heavy Cube (Wall 1) and Heavy Cube (Wall 2). The goal state is for the robot's entire body to have cleared the doorway and be standing on the opposite side, in a stable position."
+        }
+      ]
+    },
+    {
+      "name": "walk_to_small_block",
+      "description": "The robot should walk from its current position past the doorway directly to the small block.",
+      "children": [
+        {
+          "name": "walk_to_small_block",
+          "description": "The robot should walk directly towards the small block until it reaches its immediate vicinity and stops. The goal state is for the robot to be standing adjacent to the small block, having reached its final destination in a stable position."
+        }
+      ]
+    }
+  ]
+}

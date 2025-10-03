@@ -1,0 +1,164 @@
+{
+    "skills": {
+        "build_stairs_seed456": {
+            "task_path": "skills/build_stairs_seed456",
+            "policy_path": "trained_policies/build_stairs_seed456.pt",
+            "description": "The robot builds stairs from three blocks and then climbs them.",
+            "object_config_paths": [
+                "../object_config.json"
+            ],
+            "is_primitive": false,
+            "sub_skills": [
+                "Build_Stairs",
+                "Climb_Stairs"
+            ],
+            "used_by": []
+        },
+        "Build_Stairs": {
+            "task_path": "skills/Build_Stairs",
+            "policy_path": "trained_policies/Build_Stairs.pt",
+            "description": "The robot positions the small, medium, and large blocks to form a stair-like structure.",
+            "object_config_paths": [
+                "../object_config.json"
+            ],
+            "is_primitive": false,
+            "sub_skills": [
+                "Position_Medium_Block_for_robot_interaction",
+                "Position_Large_Block_for_robot_interaction"
+            ],
+            "used_by": [
+                "build_stairs_seed456"
+            ]
+        },
+        "Position_Medium_Block_for_robot_interaction": {
+            "task_path": "skills/Position_Medium_Block_for_robot_interaction",
+            "policy_path": "trained_policies/Position_Medium_Block_for_robot_interaction.pt",
+            "description": "The robot walks to and pushes the Medium Block for robot interaction into its designated middle position, adjacent to the Small Block, to form the second step.",
+            "object_config_paths": [
+                "../object_config.json"
+            ],
+            "is_primitive": false,
+            "sub_skills": [
+                "walk_to_Medium_Block_for_robot_interaction",
+                "push_Medium_Block_for_robot_interaction_to_middle_position"
+            ],
+            "used_by": [
+                "Build_Stairs"
+            ]
+        },
+        "walk_to_Medium_Block_for_robot_interaction": {
+            "task_path": "skills/walk_to_Medium_Block_for_robot_interaction",
+            "policy_path": "trained_policies/walk_to_Medium_Block_for_robot_interaction.pt",
+            "description": "The robot walks to a position near the Medium Block for robot interaction, ready to interact with it. Goal state: Robot is within pushing distance of the Medium Block for robot interaction.",
+            "object_config_paths": [
+                "../object_config.json"
+            ],
+            "is_primitive": true,
+            "sub_skills": [],
+            "used_by": [
+                "Position_Medium_Block_for_robot_interaction"
+            ]
+        },
+        "push_Medium_Block_for_robot_interaction_to_middle_position": {
+            "task_path": "skills/push_Medium_Block_for_robot_interaction_to_middle_position",
+            "policy_path": "trained_policies/push_Medium_Block_for_robot_interaction_to_middle_position.pt",
+            "description": "The robot pushes the Medium Block for robot interaction to its designated middle stair position, adjacent to the Small Block for robot interaction. Goal state: Medium Block for robot interaction is in its final middle stair position, stable and ready for the next block.",
+            "object_config_paths": [
+                "../object_config.json"
+            ],
+            "is_primitive": true,
+            "sub_skills": [],
+            "used_by": [
+                "Position_Medium_Block_for_robot_interaction"
+            ]
+        },
+        "Position_Large_Block_for_robot_interaction": {
+            "task_path": "skills/Position_Large_Block_for_robot_interaction",
+            "policy_path": "trained_policies/Position_Large_Block_for_robot_interaction.pt",
+            "description": "The robot walks to and pushes the Large Block for robot interaction into its designated top position, adjacent to the Medium Block, to complete the stairs.",
+            "object_config_paths": [
+                "../object_config.json"
+            ],
+            "is_primitive": false,
+            "sub_skills": [
+                "walk_to_Large_Block_for_robot_interaction",
+                "push_Large_Block_for_robot_interaction_to_top_position"
+            ],
+            "used_by": [
+                "Build_Stairs"
+            ]
+        },
+        "walk_to_Large_Block_for_robot_interaction": {
+            "task_path": "skills/walk_to_Large_Block_for_robot_interaction",
+            "policy_path": "trained_policies/walk_to_Large_Block_for_robot_interaction.pt",
+            "description": "The robot walks to a position near the Large Block for robot interaction, ready to interact with it. Goal state: Robot is within pushing distance of the Large Block for robot interaction.",
+            "object_config_paths": [
+                "../object_config.json"
+            ],
+            "is_primitive": true,
+            "sub_skills": [],
+            "used_by": [
+                "Position_Large_Block_for_robot_interaction"
+            ]
+        },
+        "push_Large_Block_for_robot_interaction_to_top_position": {
+            "task_path": "skills/push_Large_Block_for_robot_interaction_to_top_position",
+            "policy_path": "trained_policies/push_Large_Block_for_robot_interaction_to_top_position.pt",
+            "description": "The robot pushes the Large Block for robot interaction to its designated top stair position, adjacent to the Medium Block for robot interaction. Goal state: Large Block for robot interaction is in its final top stair position, completing the stair structure.",
+            "object_config_paths": [
+                "../object_config.json"
+            ],
+            "is_primitive": true,
+            "sub_skills": [],
+            "used_by": [
+                "Position_Large_Block_for_robot_interaction"
+            ]
+        }
+    },
+    "hierarchies": {
+        "build_stairs_seed456": {
+            "created_at": "2025-08-05T13:26:35.918140",
+            "description": "Environment set-up description: The environment should have three objects in it. A small block measuring x=1m y=1m and z=0.3m. A medium block measuring x=1m y=1m and z=0.6m. A large block measuring x=1m y=1m and z=0.9m. These blocks should be positioned in a triangle each 4m from the origin (0,0,0) which is also where the robot will be.\n        \n        Robot task description: The robot should  should walk to each of the blocks in turn and push them into a sensible place near the other blocks such that it forms something resembling stairs.\n         Once the robot has built the stairs then it should jump onto each in turn so that it climbs the stairs.",
+            "structure": {
+                "name": "build_stairs_seed456",
+                "description": "The robot builds stairs from three blocks and then climbs them.",
+                "children": [
+                    {
+                        "name": "Build_Stairs",
+                        "description": "The robot positions the small, medium, and large blocks to form a stair-like structure.",
+                        "children": [
+                            {
+                                "name": "Position_Medium_Block_for_robot_interaction",
+                                "description": "The robot walks to and pushes the Medium Block for robot interaction into its designated middle position, adjacent to the Small Block, to form the second step.",
+                                "children": [
+                                    {
+                                        "name": "walk_to_Medium_Block_for_robot_interaction",
+                                        "description": "The robot walks to a position near the Medium Block for robot interaction, ready to interact with it. Goal state: Robot is within pushing distance of the Medium Block for robot interaction."
+                                    },
+                                    {
+                                        "name": "push_Medium_Block_for_robot_interaction_to_middle_position",
+                                        "description": "The robot pushes the Medium Block for robot interaction to its designated middle stair position, adjacent to the Small Block for robot interaction. Goal state: Medium Block for robot interaction is in its final middle stair position, stable and ready for the next block."
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "Position_Large_Block_for_robot_interaction",
+                                "description": "The robot walks to and pushes the Large Block for robot interaction into its designated top position, adjacent to the Medium Block, to complete the stairs.",
+                                "children": [
+                                    {
+                                        "name": "walk_to_Large_Block_for_robot_interaction",
+                                        "description": "The robot walks to a position near the Large Block for robot interaction, ready to interact with it. Goal state: Robot is within pushing distance of the Large Block for robot interaction."
+                                    },
+                                    {
+                                        "name": "push_Large_Block_for_robot_interaction_to_top_position",
+                                        "description": "The robot pushes the Large Block for robot interaction to its designated top stair position, adjacent to the Medium Block for robot interaction. Goal state: Large Block for robot interaction is in its final top stair position, completing the stair structure."
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    }
+}

@@ -1,0 +1,160 @@
+{
+    "skills": {
+        "doorway_and_goal_seed123": {
+            "task_path": "skills/doorway_and_goal_seed123",
+            "policy_path": "trained_policies/doorway_and_goal_seed123.pt",
+            "description": "The robot should walk through the doorway and then walk to the small block.",
+            "object_config_paths": [
+                "../object_config.json"
+            ],
+            "is_primitive": false,
+            "sub_skills": [
+                "navigate_through_doorway",
+                "approach_goal_block"
+            ],
+            "used_by": []
+        },
+        "navigate_through_doorway": {
+            "task_path": "skills/navigate_through_doorway",
+            "policy_path": "trained_policies/navigate_through_doorway.pt",
+            "description": "Guide the robot through the doorway formed by Heavy Cube (Wall 1) and Heavy Cube (Wall 2).",
+            "object_config_paths": [
+                "../object_config.json"
+            ],
+            "is_primitive": false,
+            "sub_skills": [
+                "walk_to_doorway_entrance",
+                "walk_through_doorway",
+                "walk_clear_of_doorway"
+            ],
+            "used_by": [
+                "doorway_and_goal_seed123"
+            ]
+        },
+        "walk_to_doorway_entrance": {
+            "task_path": "skills/walk_to_doorway_entrance",
+            "policy_path": "trained_policies/walk_to_doorway_entrance.pt",
+            "description": "The robot should walk to a position just before the doorway, centered between Heavy Cube (Wall 1) and Heavy Cube (Wall 2), ready to pass through. The goal state is for the robot to be positioned directly in front of the doorway opening, facing through it, allowing for a direct forward movement into the doorway.",
+            "object_config_paths": [
+                "../object_config.json"
+            ],
+            "is_primitive": true,
+            "sub_skills": [],
+            "used_by": [
+                "navigate_through_doorway"
+            ]
+        },
+        "walk_through_doorway": {
+            "task_path": "skills/walk_through_doorway",
+            "policy_path": "trained_policies/walk_through_doorway.pt",
+            "description": "The robot should walk forward, passing between Heavy Cube (Wall 1) and Heavy Cube (Wall 2). The goal state is for the robot's main body to have passed the plane of the doorway, but it might not be fully clear of the doorway's immediate vicinity.",
+            "object_config_paths": [
+                "../object_config.json"
+            ],
+            "is_primitive": true,
+            "sub_skills": [],
+            "used_by": [
+                "navigate_through_doorway"
+            ]
+        },
+        "walk_clear_of_doorway": {
+            "task_path": "skills/walk_clear_of_doorway",
+            "policy_path": "trained_policies/walk_clear_of_doorway.pt",
+            "description": "The robot should continue walking forward until it is completely past the doorway, ensuring no part of its body is obstructed by Heavy Cube (Wall 1) or Heavy Cube (Wall 2). The goal state is for the robot to be fully past the doorway, in a stable standing position on the other side, ready to proceed to the next objective.",
+            "object_config_paths": [
+                "../object_config.json"
+            ],
+            "is_primitive": true,
+            "sub_skills": [],
+            "used_by": [
+                "navigate_through_doorway"
+            ]
+        },
+        "approach_goal_block": {
+            "task_path": "skills/approach_goal_block",
+            "policy_path": "trained_policies/approach_goal_block.pt",
+            "description": "Guide the robot to the Small Block for the robot to walk to after passing the doorway.",
+            "object_config_paths": [
+                "../object_config.json"
+            ],
+            "is_primitive": false,
+            "sub_skills": [
+                "walk_towards_Small_Block",
+                "walk_to_Small_Block"
+            ],
+            "used_by": [
+                "doorway_and_goal_seed123"
+            ]
+        },
+        "walk_towards_Small_Block": {
+            "task_path": "skills/walk_towards_Small_Block",
+            "policy_path": "trained_policies/walk_towards_Small_Block.pt",
+            "description": "The robot should walk in the general direction of the Small Block for the robot to walk to. The goal state is for the robot to be within a reasonable proximity to the Small Block, facing it, and ready for the final approach.",
+            "object_config_paths": [
+                "../object_config.json"
+            ],
+            "is_primitive": true,
+            "sub_skills": [],
+            "used_by": [
+                "approach_goal_block"
+            ]
+        },
+        "walk_to_Small_Block": {
+            "task_path": "skills/walk_to_Small_Block",
+            "policy_path": "trained_policies/walk_to_Small_Block.pt",
+            "description": "The robot should walk directly to the Small Block for the robot to walk to, ending its movement when it reaches the block's immediate vicinity. The goal state is for the robot to be standing next to the Small Block, indicating the completion of the task.",
+            "object_config_paths": [
+                "../object_config.json"
+            ],
+            "is_primitive": true,
+            "sub_skills": [],
+            "used_by": [
+                "approach_goal_block"
+            ]
+        }
+    },
+    "hierarchies": {
+        "doorway_and_goal_seed123": {
+            "created_at": "2025-08-05T19:24:12.811449",
+            "description": " Environment set-up description: The environment should consist of three objects. Two of these objects should be very heavy (1000kg) cubes with a z of 1.5m x of 0.5 and a y of 5m. These form the 'walls' and they should be positioned such that there is a doorway gap of 0.5m. I.e the y centre of both objects should be 5.5m apart. which would leave a 0.5m gap. The third object should be a small block of 0.3m cubed. This should be positioned 2m past the doorway in the y axis and 3m down in the y axis.\n\n        Robot task description: The robot should walk through the doorway and then walk to the small block.\n                ",
+            "structure": {
+                "name": "doorway_and_goal_seed123",
+                "description": "The robot should walk through the doorway and then walk to the small block.",
+                "children": [
+                    {
+                        "name": "navigate_through_doorway",
+                        "description": "Guide the robot through the doorway formed by Heavy Cube (Wall 1) and Heavy Cube (Wall 2).",
+                        "children": [
+                            {
+                                "name": "walk_to_doorway_entrance",
+                                "description": "The robot should walk to a position just before the doorway, centered between Heavy Cube (Wall 1) and Heavy Cube (Wall 2), ready to pass through. The goal state is for the robot to be positioned directly in front of the doorway opening, facing through it, allowing for a direct forward movement into the doorway."
+                            },
+                            {
+                                "name": "walk_through_doorway",
+                                "description": "The robot should walk forward, passing between Heavy Cube (Wall 1) and Heavy Cube (Wall 2). The goal state is for the robot's main body to have passed the plane of the doorway, but it might not be fully clear of the doorway's immediate vicinity."
+                            },
+                            {
+                                "name": "walk_clear_of_doorway",
+                                "description": "The robot should continue walking forward until it is completely past the doorway, ensuring no part of its body is obstructed by Heavy Cube (Wall 1) or Heavy Cube (Wall 2). The goal state is for the robot to be fully past the doorway, in a stable standing position on the other side, ready to proceed to the next objective."
+                            }
+                        ]
+                    },
+                    {
+                        "name": "approach_goal_block",
+                        "description": "Guide the robot to the Small Block for the robot to walk to after passing the doorway.",
+                        "children": [
+                            {
+                                "name": "walk_towards_Small_Block",
+                                "description": "The robot should walk in the general direction of the Small Block for the robot to walk to. The goal state is for the robot to be within a reasonable proximity to the Small Block, facing it, and ready for the final approach."
+                            },
+                            {
+                                "name": "walk_to_Small_Block",
+                                "description": "The robot should walk directly to the Small Block for the robot to walk to, ending its movement when it reaches the block's immediate vicinity. The goal state is for the robot to be standing next to the Small Block, indicating the completion of the task."
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    }
+}

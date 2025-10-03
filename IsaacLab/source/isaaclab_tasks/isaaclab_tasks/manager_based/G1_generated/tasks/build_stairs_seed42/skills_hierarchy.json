@@ -1,0 +1,42 @@
+{
+  "name": "build_stairs_seed42",
+  "description": "The robot builds stairs from three blocks and then climbs them.",
+  "children": [
+    {
+      "name": "build_stairs",
+      "description": "The robot pushes the small, medium, and large blocks into a configuration resembling stairs.",
+      "children": [
+        {
+          "name": "position_small_block",
+          "description": "The robot positions the Small Block for robot interaction as the first step of the stairs. Goal state: Small Block is moved to its designated position for the stairs."
+        },
+        {
+          "name": "position_medium_block",
+          "description": "The robot positions the Medium Block for robot interaction as the second step of the stairs. Goal state: Medium Block is moved to its designated position for the stairs."
+        },
+        {
+          "name": "position_large_block",
+          "description": "The robot positions the Large Block for robot interaction as the third step of the stairs. Goal state: Large Block is moved to its designated position for the stairs."
+        }
+      ]
+    },
+    {
+      "name": "climb_stairs",
+      "description": "The robot jumps onto each block in sequence to ascend the built stairs.",
+      "children": [
+        {
+          "name": "ascend_first_step",
+          "description": "The robot climbs onto the Small Block for robot interaction. Goal state: Robot is standing stably on top of the Small Block."
+        },
+        {
+          "name": "ascend_second_step",
+          "description": "The robot climbs onto the Medium Block for robot interaction. Goal state: Robot is standing stably on top of the Medium Block."
+        },
+        {
+          "name": "ascend_third_step",
+          "description": "The robot climbs onto the Large Block for robot interaction. Goal state: Robot is standing stably on top of the Large Block."
+        }
+      ]
+    }
+  ]
+}

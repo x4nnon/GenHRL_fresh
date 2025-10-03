@@ -1,0 +1,117 @@
+{
+  "_comment": "Scene contains five identical cylinder columns for the robot to knock over.",
+  "num_spheres": 0,
+  "_sphere_comments": [],
+  "mass_spheres": [],
+  "position_spheres": [],
+  "rotation_spheres": [],
+  "radius_spheres": [],
+  "num_cubes": 0,
+  "_cube_comments": [],
+  "mass_cubes": [],
+  "position_cubes": [],
+  "rotation_cubes": [],
+  "size_cubes": [],
+  "num_cylinders": 5,
+  "_cylinder_comments": [
+    "Cylinder Column 1 for robot to knock over",
+    "Cylinder Column 2 for robot to knock over",
+    "Cylinder Column 3 for robot to knock over",
+    "Cylinder Column 4 for robot to knock over",
+    "Cylinder Column 5 for robot to knock over"
+  ],
+  "mass_cylinders": [
+    150.0,
+    150.0,
+    150.0,
+    150.0,
+    150.0
+  ],
+  "position_cylinders": [
+    [
+      4.0,
+      0.0,
+      1.0
+    ],
+    [
+      2.828,
+      2.828,
+      1.0
+    ],
+    [
+      0.0,
+      4.0,
+      1.0
+    ],
+    [
+      2.828,
+      -2.828,
+      1.0
+    ],
+    [
+      0.0,
+      -4.0,
+      1.0
+    ]
+  ],
+  "rotation_cylinders": [
+    [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  ],
+  "radius_cylinders": [
+    0.3,
+    0.3,
+    0.3,
+    0.3,
+    0.3
+  ],
+  "height_cylinders": [
+    2.0,
+    2.0,
+    2.0,
+    2.0,
+    2.0
+  ],
+  "num_cones": 0,
+  "_cone_comments": [],
+  "mass_cones": [],
+  "position_cones": [],
+  "rotation_cones": [],
+  "radius_cones": [],
+  "height_cones": [],
+  "num_capsules": 0,
+  "_capsule_comments": [],
+  "mass_capsules": [],
+  "position_capsules": [],
+  "rotation_capsules": [],
+  "radius_capsules": [],
+  "height_capsules": []
+}

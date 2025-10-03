@@ -1,0 +1,39 @@
+{
+  "name": "doorway_and_goal_seed42",
+  "description": "The robot should walk through the doorway formed by two heavy cubes and then walk to the small block.",
+  "children": [
+    {
+      "name": "Navigate_Doorway",
+      "description": "The robot should approach, align with, and pass through the doorway formed by Heavy Cube (Wall 1) and Heavy Cube (Wall 2). The goal state is for the robot to have fully cleared the doorway and be on the other side, ready to proceed to the next objective.",
+      "children": [
+        {
+          "name": "approach_doorway_and_align",
+          "description": "The robot should walk towards the general vicinity of the doorway, then adjust its position to be centered between Heavy Cube (Wall 1) and Heavy Cube (Wall 2), and finally align its body to face directly through the gap. The goal state is for the robot to be standing centered in front of the doorway, facing directly through it, ready to walk forward.",
+          "object_config_paths": [
+            "/home/tomcannon/Documents/GenHRL_v2/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/manager_based/G1_generated/skills/doorway_and_goal_seed42/object_config.json"
+          ]
+        },
+        {
+          "name": "walk_through_doorway",
+          "description": "The robot should walk forward from its aligned position to enter the doorway, passing the plane of Heavy Cube (Wall 1), and continue walking forward to fully clear the doorway, passing beyond Heavy Cube (Wall 2). The goal state is for the robot to be standing completely past the doorway, on the other side, with its entire body clear of both Heavy Cube (Wall 1) and Heavy Cube (Wall 2), ready to walk to the next target.",
+          "object_config_paths": [
+            "/home/tomcannon/Documents/GenHRL_v2/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/manager_based/G1_generated/skills/doorway_and_goal_seed42/object_config.json"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Walk_to_Small_Block",
+      "description": "The robot should walk from its current position past the doorway to the Small Block. The goal state is for the robot to be positioned at the Small Block, having completed the task.",
+      "children": [
+        {
+          "name": "walk_to_Small_Block",
+          "description": "The robot should walk towards the Small Block for the robot to walk to, continuing until it is close to the object and then stopping movement upon reaching it. The goal state is for the robot to be standing directly adjacent to or on top of the Small Block, indicating the final destination has been reached.",
+          "object_config_paths": [
+            "/home/tomcannon/Documents/GenHRL_v2/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/manager_based/G1_generated/skills/doorway_and_goal_seed42/object_config.json"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+    "skills": {
+        "knock_over_pillars_seed456": {
+            "task_path": "skills/knock_over_pillars_seed456",
+            "policy_path": "trained_policies/knock_over_pillars_seed456.pt",
+            "description": "The robot should sequentially approach each of the five cylinder columns and apply force to them until all five are knocked over and lying on the floor. This is the top-level task that will be decomposed into simpler skills.",
+            "object_config_paths": [
+                "../object_config.json"
+            ],
+            "is_primitive": true,
+            "sub_skills": [],
+            "used_by": []
+        }
+    },
+    "hierarchies": {
+        "knock_over_pillars_seed456": {
+            "created_at": "2025-08-05T20:05:51.884195",
+            "description": " Environment set-up description: The environment should consist of five objects. Each object is identical and is a cylinder column, with z dimension of 2m and a radius of 0.3m. These five objects should be placed at equal distance from the robot approximately 4m away. \n\n        Robot task description: The robot should walk to each of the objects in turn and knock them over such that they are on the floor. It should treat each object as a separate skill. ",
+            "structure": {
+                "name": "knock_over_pillars_seed456",
+                "description": "The robot should sequentially approach each of the five cylinder columns and apply force to them until all five are knocked over and lying on the floor. This is the top-level task that will be decomposed into simpler skills."
+            }
+        }
+    }
+}

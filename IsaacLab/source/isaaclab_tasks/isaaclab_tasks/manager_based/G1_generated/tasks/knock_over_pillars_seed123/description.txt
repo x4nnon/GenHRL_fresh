@@ -1,0 +1,3 @@
+ Environment set-up description: The environment should consist of five objects. Each object is identical and is a cylinder column, with z dimension of 2m and a radius of 0.3m. These five objects should be placed at equal distance from the robot approximately 4m away. 
+
+        Robot task description: The robot should walk to each of the objects in turn and knock them over such that they are on the floor. It should treat each object as a separate skill. 

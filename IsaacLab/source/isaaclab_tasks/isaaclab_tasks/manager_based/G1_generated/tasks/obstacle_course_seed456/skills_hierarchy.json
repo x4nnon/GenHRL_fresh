@@ -1,0 +1,62 @@
+{
+  "name": "obstacle_course_seed456",
+  "description": "Complete the obstacle course by navigating through and interacting with various objects.",
+  "children": [
+    {
+      "name": "Navigate_and_Jump_Over_LowWall",
+      "description": "Approach the low wall and successfully jump over it, landing stably on the other side.",
+      "children": [
+        {
+          "name": "walk_to_lowWall",
+          "description": "The robot should walk until its base is within a close proximity (e.g., 0.5m) to the low wall, facing it. The goal state is the robot standing stably in front of the low wall, ready to initiate a jump."
+        },
+        {
+          "name": "jump_over_lowWall",
+          "description": "The robot should perform a jump action to clear the low wall, landing stably on the opposite side. The goal state is the robot standing stably on the ground on the far side of the low wall."
+        }
+      ]
+    },
+    {
+      "name": "Push_LargeSphere_to_Topple_HighWall",
+      "description": "Approach the large sphere, push it towards the high wall, and ensure the high wall is toppled.",
+      "children": [
+        {
+          "name": "walk_to_largeSphere",
+          "description": "The robot should walk until its base is within a close proximity (e.g., 0.5m) to the large sphere, positioned to push it towards the high wall. The goal state is the robot standing stably near the large sphere, ready to initiate a push."
+        },
+        {
+          "name": "push_largeSphere_towards_highWall",
+          "description": "The robot should apply force to the large sphere, pushing it in the direction of the high wall until the large sphere makes contact with and pushes over the high wall. The goal state is the large sphere having impacted and toppled the high wall, and the robot is stable after the push."
+        }
+      ]
+    },
+    {
+      "name": "Kick_SmallSphere_Away",
+      "description": "Approach the small sphere and kick it away from its current position.",
+      "children": [
+        {
+          "name": "walk_to_smallSphere",
+          "description": "The robot should walk until its base is within a close proximity (e.g., 0.5m) to the small sphere, positioned to kick it. The goal state is the robot standing stably near the small sphere, ready to initiate a kick."
+        },
+        {
+          "name": "kick_smallSphere_away_from_wall",
+          "description": "The robot should perform a kicking motion to propel the small sphere away from its current location and the high wall. The goal state is the small sphere having moved a significant distance (e.g., 2m) from its original position, and the robot is stable after the kick."
+        }
+      ]
+    },
+    {
+      "name": "Jump_On_Top_of_BlockCube",
+      "description": "Approach the block cube and jump on top of it.",
+      "children": [
+        {
+          "name": "walk_to_blockCube",
+          "description": "The robot should walk until its base is within a close proximity (e.g., 0.5m) to the block cube, facing it. The goal state is the robot standing stably in front of the block cube, ready to initiate a jump."
+        },
+        {
+          "name": "jump_on_top_of_blockCube",
+          "description": "The robot should perform a jump action to land on top of the block cube, achieving a stable standing position. The goal state is the robot standing stably on the top surface of the block cube."
+        }
+      ]
+    }
+  ]
+}
