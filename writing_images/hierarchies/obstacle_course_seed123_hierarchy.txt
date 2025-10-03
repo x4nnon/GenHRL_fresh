@@ -1,0 +1,68 @@
+
+====================================================================================================
+📁 TASK: obstacle_course_seed123
+====================================================================================================
+📋 Complete the obstacle course by navigating over a low wall, pushing a large sphere, kicking a
+small sphere, and jumping onto a block.
+
+└── obstacle_course_seed123
+        📝 Complete the obstacle course by navigating over a low wall, pushing a large sphere, kicking a
+        📝       small sphere, and jumping onto a block.
+    ├── jump_over_lowWall
+    │       📝 Navigate to and jump over the low wall. The robot should end up standing on the opposite
+    │       📝           side of the low wall, ready to proceed to the next obstacle.
+    │   ├── walk_to_lowWall
+    │   │       📝 The robot walks forward until it is positioned directly in front of the low wall, at an
+    │   │       📝               appropriate distance to initiate a jump. The robot should be stable and facing the low
+    │   │       📝               wall.
+    │   ├── execute_jump_over_lowWall
+    │   │       📝 The robot performs a jumping action to clear the low wall. The goal state is the robot
+    │   │       📝               being airborne over the low wall, or just beginning its descent on the other side.
+    │   └── land_after_lowWall_jump
+    │           📝 The robot lands safely on the ground on the far side of the low wall and regains a
+    │           📝               stable standing posture. The robot is now past the low wall and ready to approach the
+    │           📝               large sphere.
+    ├── push_largeSphere_towards_highWall
+    │       📝 Approach the large sphere and push it until it collides with and pushes over the high wall.
+    │       📝           The robot should end up near the large sphere, with the high wall having fallen.
+    │   ├── walk_to_largeSphere
+    │   │       📝 The robot walks forward until it is positioned directly behind the large sphere, at an
+    │   │       📝               appropriate distance to initiate a push. The robot should be stable and facing the large
+    │   │       📝               sphere.
+    │   ├── push_largeSphere_until_highWall_falls
+    │   │       📝 The robot applies continuous force to the large sphere, pushing it along the ground
+    │   │       📝               towards the high wall. The skill is complete when the large sphere has made contact with
+    │   │       📝               the high wall and the high wall has been knocked over. The robot should remain near the
+    │   │       📝               large sphere.
+    │   └── stabilize_after_pushing_largeSphere
+    │           📝 The robot stabilizes its posture after the pushing action, ensuring it is in a stable
+    │           📝               standing position near the large sphere, ready to move to the next obstacle.
+    ├── kick_smallSphere_away_from_highWall
+    │       📝 Approach the small sphere and kick it away from the high wall. The robot should end up near
+    │       📝           the small sphere, with the small sphere having been displaced.
+    │   ├── walk_to_smallSphere
+    │   │       📝 The robot walks forward until it is positioned appropriately near the small sphere,
+    │   │       📝               ready to perform a kicking action. The robot should be stable and facing the small
+    │   │       📝               sphere.
+    │   ├── execute_kick_smallSphere
+    │   │       📝 The robot performs a kicking motion to propel the small sphere away from its current
+    │   │       📝               position near the high wall. The skill is complete once the small sphere has been
+    │   │       📝               significantly displaced by the kick.
+    │   └── stabilize_after_kicking_smallSphere
+    │           📝 The robot stabilizes its posture after the kicking action, ensuring it is in a stable
+    │           📝               standing position near the small sphere, ready to move to the final obstacle.
+    └── jump_on_top_of_blockCube
+            📝 Approach the block cube and jump on top of it. The robot should end up standing stably on
+            📝           the top surface of the block cube.
+        ├── walk_to_blockCube
+        │       📝 The robot walks forward until it is positioned directly in front of the block cube, at
+        │       📝               an appropriate distance to initiate a jump onto its top surface. The robot should be
+        │       📝               stable and facing the block cube.
+        ├── execute_jump_on_top_of_blockCube
+        │       📝 The robot performs a jumping action to land on top of the block cube. The goal state is
+        │       📝               the robot being airborne towards the block cube, or just beginning its descent onto its
+        │       📝               top surface.
+        └── land_on_top_of_blockCube
+                📝 The robot lands safely on the top surface of the block cube and regains a stable
+                📝               standing posture. The robot is now on top of the block cube, completing the final
+                📝               obstacle.

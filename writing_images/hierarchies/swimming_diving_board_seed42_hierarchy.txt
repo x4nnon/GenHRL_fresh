@@ -1,0 +1,15 @@
+
+====================================================================================================
+📁 TASK: swimming_diving_board_seed42
+====================================================================================================
+📋 The robot should walk up the lower rectangular block, then the higher rectangular block, proceed
+to walk along the diving board platform, kick the small cone into the swimming pool, perform a
+diving motion into the swimming pool, and then act like it is swimming. The final state should
+have the cone in the pool and the robot actively swimming.
+
+└── perform_swimming_diving_board_challenge
+        📝 The robot should walk up the lower rectangular block, then the higher rectangular block, proceed
+        📝       to walk along the diving board platform, kick the small cone into the swimming pool, perform a
+        📝       diving motion into the swimming pool, and then act like it is swimming. The final state should
+        📝       have the cone in the pool and the robot actively swimming.
+        🔧 Object config: 1 path(s)

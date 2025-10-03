@@ -1,0 +1,48 @@
+
+====================================================================================================
+📁 TASK: obstacle_course_seed456
+====================================================================================================
+📋 Complete the obstacle course by traversing obstacles and manipulating objects sequentially.
+
+└── obstacle_course_seed456
+        📝 Complete the obstacle course by traversing obstacles and manipulating objects sequentially.
+    ├── traverse_lowWall
+    │       📝 Approach the low wall and successfully move to the other side.
+    │   ├── walk_to_lowWall
+    │   │       📝 The robot walks forward until its base is positioned directly in front of the lowWall,
+    │   │       📝               at a suitable distance to initiate a jump. Goal state: Robot's base is within 0.5m of
+    │   │       📝               the lowWall, facing it.
+    │   └── jump_over_lowWall
+    │           📝 The robot performs a jump action to clear the lowWall, landing on the opposite side.
+    │           📝               Goal state: Robot's feet are on the ground on the side of the lowWall closer to the
+    │           📝               largeSphere, and the robot is upright.
+    ├── push_largeSphere_into_highWall
+    │       📝 Approach the large sphere and push it with sufficient force to make it collide with and push
+    │       📝           over the high wall.
+    │   ├── walk_to_largeSphere
+    │   │       📝 The robot walks forward from its current position until its base is positioned directly
+    │   │       📝               in front of the largeSphere, at a suitable distance to initiate a push. Goal state:
+    │   │       📝               Robot's base is within 0.5m of the largeSphere, facing it.
+    │   └── push_largeSphere_towards_highWall
+    │           📝 The robot extends its arms or body to apply force to the largeSphere, pushing it in the
+    │           📝               direction of the highWall until the largeSphere makes contact with the highWall. Goal
+    │           📝               state: The largeSphere has collided with the highWall, and the highWall has fallen over.
+    ├── kick_smallSphere_awayFrom_highWall
+    │       📝 Approach the small sphere and kick it away from the high wall.
+    │   ├── walk_to_smallSphere
+    │   │       📝 The robot walks forward from its current position until its base is positioned directly
+    │   │       📝               in front of the smallSphere, at a suitable distance to initiate a kick. Goal state:
+    │   │       📝               Robot's base is within 0.5m of the smallSphere, facing it.
+    │   └── kick_smallSphere_awayFrom_highWall
+    │           📝 The robot performs a kicking motion with one leg to propel the smallSphere away from the
+    │           📝               highWall. Goal state: The smallSphere has moved at least 1.0m away from its initial
+    │           📝               position near the highWall.
+    └── jump_on_blockCube
+            📝 Approach the block cube and jump on top of it.
+        ├── walk_to_blockCube
+        │       📝 The robot walks forward from its current position until its base is positioned directly
+        │       📝               in front of the blockCube, at a suitable distance to initiate a jump. Goal state:
+        │       📝               Robot's base is within 0.5m of the blockCube, facing it.
+        └── jump_on_blockCube
+                📝 The robot performs a jump action to land on top of the blockCube. Goal state: Robot's
+                📝               feet are on the top surface of the blockCube, and the robot is upright and stable.

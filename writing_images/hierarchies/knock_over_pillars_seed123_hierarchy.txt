@@ -1,0 +1,14 @@
+
+====================================================================================================
+📁 TASK: knock_over_pillars_seed123
+====================================================================================================
+📋 The robot should walk to each of the five cylinder columns in turn and knock them over such that
+they are all on the floor. The goal state is achieved when all five cylinder columns are lying
+flat on the floor, representing a stable configuration from which no further action is required
+for this task.
+
+└── knock_over_all_cylinderColumns
+        📝 The robot should walk to each of the five cylinder columns in turn and knock them over such that
+        📝       they are all on the floor. The goal state is achieved when all five cylinder columns are lying
+        📝       flat on the floor, representing a stable configuration from which no further action is required
+        📝       for this task.

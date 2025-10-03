@@ -1,0 +1,42 @@
+
+====================================================================================================
+📁 TASK: navigate_test
+====================================================================================================
+📋 The robot navigates to a cone, a cylinder, and a cube in sequence, then returns to its starting
+position, and finally performs jumping actions.
+
+└── navigate_test
+        📝 The robot navigates to a cone, a cylinder, and a cube in sequence, then returns to its starting
+        📝       position, and finally performs jumping actions.
+    ├── Navigate_to_Objects_in_Sequence
+    │       📝 The robot sequentially walks to the cone, then the cylinder, and then the cube, ensuring it
+    │       📝           reaches within 1m of each.
+    │   ├── Walk_to_cone
+    │   │       📝 The robot walks towards the cone until its base is within 1m of the cone's base. The
+    │   │       📝               goal state is achieved when the robot's position is within 1m of the cone, providing a
+    │   │       📝               stable configuration to begin walking towards the cylinder.
+    │   │       🔧 Object config: 1 path(s)
+    │   ├── Walk_to_cylinder
+    │   │       📝 The robot walks towards the cylinder until its base is within 1m of the cylinder's base.
+    │   │       📝               The goal state is achieved when the robot's position is within 1m of the cylinder,
+    │   │       📝               providing a stable configuration to begin walking towards the cube.
+    │   │       🔧 Object config: 1 path(s)
+    │   └── Walk_to_cube
+    │           📝 The robot walks towards the cube until its base is within 1m of the cube's base. The
+    │           📝               goal state is achieved when the robot's position is within 1m of the cube, providing a
+    │           📝               stable configuration to begin walking back to the start location.
+    │           🔧 Object config: 1 path(s)
+    └── Return_to_Start_and_Jump
+            📝 The robot returns to its initial starting position and then performs a sequence of jumping
+            📝           actions.
+        ├── Walk_to_startLocation
+        │       📝 The robot walks towards its initial starting position (0,0) in x and y coordinates until
+        │       📝               its base is within 1m of that point. The goal state is achieved when the robot's
+        │       📝               position is within 1m of the start location, providing a stable configuration to begin
+        │       📝               jumping.
+        │       🔧 Object config: 1 path(s)
+        └── Jump_up_and_down
+                📝 The robot performs a sequence of vertical jumps, repeatedly lifting its body off the
+                📝               ground and landing. The goal state is achieved after the robot has completed a
+                📝               predefined number of jumps, signifying the completion of the task.
+                🔧 Object config: 1 path(s)

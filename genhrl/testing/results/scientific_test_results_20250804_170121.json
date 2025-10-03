@@ -1,0 +1,60 @@
+{
+  "metadata": {
+    "robot": "G1",
+    "provider": "google",
+    "isaaclab_path": "/home/tomcannon/Documents/GenHRL_v2/IsaacLab",
+    "timestamp": "20250804_170121",
+    "total_experiments": 2,
+    "focus": "generation_only"
+  },
+  "results": [
+    {
+      "task_name": "obstacle_course_seed42",
+      "seed": 42,
+      "generation_success": true,
+      "generation_time": 1333.0037171840668,
+      "generated_skills": [
+        "jump_over_lowWall",
+        "jump_on_top_of_blockCube",
+        "walk_to_largeSphere",
+        "push_largeSphere_to_topple_highWall",
+        "walk_to_lowWall",
+        "walk_to_smallSphere",
+        "walk_to_blockCube",
+        "traverse_lowWall",
+        "push_largeSphere_towards_highWall",
+        "jump_on_blockCube",
+        "kick_smallSphere_away_from_wall",
+        "kick_smallSphere_away",
+        "obstacle_course_seed42"
+      ],
+      "error_message": null
+    },
+    {
+      "task_name": "obstacle_course_seed123",
+      "seed": 123,
+      "generation_success": true,
+      "generation_time": 2146.8172600269318,
+      "generated_skills": [
+        "jump_over_lowWall",
+        "obstacle_course_seed123",
+        "stabilize_after_kicking_smallSphere",
+        "jump_on_top_of_blockCube",
+        "walk_to_largeSphere",
+        "walk_to_lowWall",
+        "walk_to_smallSphere",
+        "walk_to_blockCube",
+        "push_largeSphere_towards_highWall",
+        "execute_jump_on_top_of_blockCube",
+        "land_on_top_of_blockCube",
+        "execute_jump_over_lowWall",
+        "kick_smallSphere_away_from_highWall",
+        "execute_kick_smallSphere",
+        "land_after_lowWall_jump",
+        "push_largeSphere_until_highWall_falls",
+        "stabilize_after_pushing_largeSphere"
+      ],
+      "error_message": null
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn-primary {
+    @apply bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-colors;
+  }
+  
+  .btn-secondary {
+    @apply bg-gray-100 hover:bg-gray-200 text-gray-800 font-medium py-2 px-4 rounded-lg transition-colors;
+  }
+  
+  .btn-danger {
+    @apply bg-red-600 hover:bg-red-700 text-white font-medium py-2 px-4 rounded-lg transition-colors;
+  }
+  
+  .card {
+    @apply bg-white rounded-lg shadow-md p-6 border border-gray-200;
+  }
+  
+  .input-field {
+    @apply w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent;
+  }
+  
+  .sidebar {
+    @apply w-64 bg-gray-50 border-r border-gray-200 h-full p-4 fixed left-0 top-0;
+  }
+  
+  .main-content {
+    @apply ml-64 p-6 min-h-screen bg-gray-50;
+  }
+}
+
+/* Code syntax highlighting customization */
+.code-highlight {
+  @apply text-sm;
+}
+
+/* JSON tree customization */
+.json-tree {
+  @apply text-sm;
+}
+
+/* Enhanced custom scrollbar for all browsers */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #6b7280 #f3f4f6;
+}
+
+/* Webkit browsers (Chrome, Safari, Edge) */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f3f4f6;
+  border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #6b7280;
+  border-radius: 4px;
+  border: 1px solid #f3f4f6;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #4b5563;
+}
+
+.custom-scrollbar::-webkit-scrollbar-corner {
+  background: #f3f4f6;
+}
+
+/* Dark theme scrollbar for terminal */
+.custom-scrollbar.dark-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #9ca3af #374151;
+}
+
+.custom-scrollbar.dark-scrollbar::-webkit-scrollbar-track {
+  background: #374151;
+  border-radius: 4px;
+}
+
+.custom-scrollbar.dark-scrollbar::-webkit-scrollbar-thumb {
+  background: #9ca3af;
+  border-radius: 4px;
+  border: 1px solid #374151;
+}
+
+.custom-scrollbar.dark-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #d1d5db;
+}
+
+.custom-scrollbar.dark-scrollbar::-webkit-scrollbar-corner {
+  background: #374151;
+}
+
+/* Terminal specific improvements */
+.terminal-container {
+  position: relative;
+  max-height: 60vh; /* Set sensible viewport height for scroll */
+  min-height: 300px;
+  overflow-y: auto; /* Enable vertical scrolling */
+  overflow-x: hidden;
+}
+
+.terminal-content {
+  /* Let content size naturally; parent handles scrolling */
+  overflow-y: visible;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* Auto-scroll indicator */
+.scroll-indicator {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.scroll-indicator.visible {
+  opacity: 1;
+}

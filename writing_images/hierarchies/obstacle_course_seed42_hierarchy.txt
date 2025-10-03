@@ -1,0 +1,54 @@
+
+====================================================================================================
+📁 TASK: obstacle_course_seed42
+====================================================================================================
+📋 The robot should first walk to the low wall and then jump over it, then the robot should push
+the large sphere into the high wall. The sphere hitting the high wall should push it over. The
+robot should then walk to a small sphere and kick it away from the wall. Finally the robot
+should walk to a 0.5x0.5x0.5 block and jump on top of it.
+
+└── obstacle_course_seed42
+        📝 The robot should first walk to the low wall and then jump over it, then the robot should push
+        📝       the large sphere into the high wall. The sphere hitting the high wall should push it over. The
+        📝       robot should then walk to a small sphere and kick it away from the wall. Finally the robot
+        📝       should walk to a 0.5x0.5x0.5 block and jump on top of it.
+    ├── traverse_lowWall
+    │       📝 The robot should approach the low wall, jump over it, and land on the other side.
+    │   ├── walk_to_lowWall
+    │   │       📝 The robot should walk to a position directly in front of the low wall, ready to interact
+    │   │       📝               with it.
+    │   │       🔧 Object config: 1 path(s)
+    │   └── jump_over_lowWall
+    │           📝 The robot should execute a jump to clear the low wall and land safely on the other side.
+    │           🔧 Object config: 1 path(s)
+    ├── push_largeSphere_to_topple_highWall
+    │       📝 The robot should walk to the large sphere and push it towards the high wall until the high
+    │       📝           wall is toppled.
+    │   ├── walk_to_largeSphere
+    │   │       📝 The robot should walk to a position directly in front of the large sphere, ready to push
+    │   │       📝               it.
+    │   │       🔧 Object config: 1 path(s)
+    │   └── push_largeSphere_towards_highWall
+    │           📝 The robot should apply force to the large sphere to push it until it collides with and
+    │           📝               pushes over the high wall.
+    │           🔧 Object config: 1 path(s)
+    ├── kick_smallSphere_away
+    │       📝 The robot should walk to the small sphere and kick it away from its current position.
+    │   ├── walk_to_smallSphere
+    │   │       📝 The robot should walk to a position directly in front of the small sphere, ready to kick
+    │   │       📝               it.
+    │   │       🔧 Object config: 1 path(s)
+    │   └── kick_smallSphere_away_from_wall
+    │           📝 The robot should execute a kick action on the small sphere, displacing it significantly
+    │           📝               from its current position.
+    │           🔧 Object config: 1 path(s)
+    └── jump_on_blockCube
+            📝 The robot should walk to the block cube and jump on top of it.
+        ├── walk_to_blockCube
+        │       📝 The robot should walk to a position directly in front of the block cube, ready to jump
+        │       📝               on it.
+        │       🔧 Object config: 1 path(s)
+        └── jump_on_top_of_blockCube
+                📝 The robot should execute a jump to land on top of the block cube and stabilize its
+                📝               posture.
+                🔧 Object config: 1 path(s)

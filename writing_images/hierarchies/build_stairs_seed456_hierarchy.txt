@@ -1,0 +1,89 @@
+
+====================================================================================================
+📁 TASK: build_stairs_seed456
+====================================================================================================
+📋 Arrange the blocks to form climbable stairs and then climb them.
+
+└── build_stairs_seed456
+        📝 Arrange the blocks to form climbable stairs and then climb them.
+    ├── BuildStairs
+    │       📝 Arrange the Small, Medium, and Large Blocks to form a climbable stair structure.
+    │   ├── PlaceSmallBlock
+    │   │       📝 Locate and place the Small Block at the designated base position for the stairs.
+    │   │   ├── walk_to_SmallBlock
+    │   │   │       📝 The robot should walk until it is in close proximity to the Small Block, ready for
+    │   │   │       📝                   interaction. Goal: Robot is near SmallBlock.
+    │   │   │       🔧 Object config: 1 path(s)
+    │   │   ├── pick_up_SmallBlock
+    │   │   │       📝 The robot should grasp and lift the Small Block, holding it securely. Goal:
+    │   │   │       📝                   SmallBlock is grasped and lifted by the robot.
+    │   │   │       🔧 Object config: 1 path(s)
+    │   │   ├── walk_with_carriedSmallBlock_to_stairBasePosition
+    │   │   │       📝 The robot should walk while carrying the Small Block to the designated base position
+    │   │   │       📝                   where the stairs will begin. Goal: Robot carrying SmallBlock is at the stair base
+    │   │   │       📝                   position.
+    │   │   │       🔧 Object config: 1 path(s)
+    │   │   └── place_carriedSmallBlock_at_stairBasePosition
+    │   │           📝 The robot should carefully lower and release the Small Block at the stair base
+    │   │           📝                   position. Goal: SmallBlock is stably placed at the stair base position.
+    │   │           🔧 Object config: 1 path(s)
+    │   ├── PlaceMediumBlock
+    │   │       📝 Locate and place the Medium Block next to the Small Block to form the second step.
+    │   │   ├── walk_to_MediumBlock
+    │   │   │       📝 The robot should walk until it is in close proximity to the Medium Block, ready for
+    │   │   │       📝                   interaction. Goal: Robot is near MediumBlock.
+    │   │   │       🔧 Object config: 1 path(s)
+    │   │   ├── pick_up_MediumBlock
+    │   │   │       📝 The robot should grasp and lift the Medium Block, holding it securely. Goal:
+    │   │   │       📝                   MediumBlock is grasped and lifted by the robot.
+    │   │   │       🔧 Object config: 1 path(s)
+    │   │   ├── walk_with_carriedMediumBlock_to_positionNextTo_SmallBlock
+    │   │   │       📝 The robot should walk while carrying the Medium Block to a position adjacent to the
+    │   │   │       📝                   already placed Small Block, forming the next step. Goal: Robot carrying MediumBlock
+    │   │   │       📝                   is next to SmallBlock.
+    │   │   │       🔧 Object config: 1 path(s)
+    │   │   └── place_carriedMediumBlock_nextTo_SmallBlock
+    │   │           📝 The robot should carefully lower and release the Medium Block next to the Small
+    │   │           📝                   Block. Goal: MediumBlock is stably placed next to SmallBlock.
+    │   │           🔧 Object config: 1 path(s)
+    │   └── PlaceLargeBlock
+    │           📝 Locate and place the Large Block next to the Medium Block to form the third step.
+    │       ├── walk_to_LargeBlock
+    │       │       📝 The robot should walk until it is in close proximity to the Large Block, ready for
+    │       │       📝                   interaction. Goal: Robot is near LargeBlock.
+    │       │       🔧 Object config: 1 path(s)
+    │       ├── pick_up_LargeBlock
+    │       │       📝 The robot should grasp and lift the Large Block, holding it securely. Goal:
+    │       │       📝                   LargeBlock is grasped and lifted by the robot.
+    │       │       🔧 Object config: 1 path(s)
+    │       ├── walk_with_carriedLargeBlock_to_positionNextTo_MediumBlock
+    │       │       📝 The robot should walk while carrying the Large Block to a position adjacent to the
+    │       │       📝                   already placed Medium Block, forming the final step. Goal: Robot carrying LargeBlock
+    │       │       📝                   is next to MediumBlock.
+    │       │       🔧 Object config: 1 path(s)
+    │       └── place_carriedLargeBlock_nextTo_MediumBlock
+    │               📝 The robot should carefully lower and release the Large Block next to the Medium
+    │               📝                   Block. Goal: LargeBlock is stably placed next to MediumBlock.
+    │               🔧 Object config: 1 path(s)
+    └── ClimbStairs
+            📝 Jump onto each block in sequence, starting from the Small Block, to climb the built stairs.
+        ├── JumpOntoSmallBlock
+        │       📝 The robot should jump onto the Small Block, which is the first step of the stairs.
+        │   └── jump_onto_SmallBlock
+        │           📝 The robot should perform a jump to land on top of the Small Block. Goal: Robot is
+        │           📝                   standing stably on top of SmallBlock.
+        │           🔧 Object config: 1 path(s)
+        ├── JumpOntoMediumBlock
+        │       📝 The robot should jump from the Small Block onto the Medium Block, which is the second
+        │       📝               step.
+        │   └── jump_onto_MediumBlock
+        │           📝 The robot should perform a jump from its current position (on SmallBlock) to land on
+        │           📝                   top of the Medium Block. Goal: Robot is standing stably on top of MediumBlock.
+        │           🔧 Object config: 1 path(s)
+        └── JumpOntoLargeBlock
+                📝 The robot should jump from the Medium Block onto the Large Block, which is the final
+                📝               step.
+            └── jump_onto_LargeBlock
+                    📝 The robot should perform a jump from its current position (on MediumBlock) to land
+                    📝                   on top of the Large Block. Goal: Robot is standing stably on top of LargeBlock.
+                    🔧 Object config: 1 path(s)

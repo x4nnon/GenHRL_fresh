@@ -1,0 +1,84 @@
+
+====================================================================================================
+📁 TASK: build_stairs_seed123
+====================================================================================================
+📋 The robot will first arrange the Small Block, Medium Block, and Large Block to form a climbable
+stair structure, then proceed to climb the constructed stairs by jumping onto each block in
+ascending order of height.
+
+└── build_stairs_seed123
+        📝 The robot will first arrange the Small Block, Medium Block, and Large Block to form a climbable
+        📝       stair structure, then proceed to climb the constructed stairs by jumping onto each block in
+        📝       ascending order of height.
+    ├── build_stair_structure
+    │       📝 The robot will pick up and place the blocks in a specific configuration to form a climbable
+    │       📝           stair structure, with the Small Block on top of the Medium Block, and the Medium Block on
+    │       📝           top of the Large Block. The goal state is that the Small Block is stably placed on top of
+    │       📝           the Medium Block, and the Medium Block is stably placed on top of the Large Block, forming a
+    │       📝           three-tiered stair structure. The robot is not holding any blocks and is in a stable
+    │       📝           standing position near the constructed stairs, ready to begin climbing.
+    │   ├── place_mediumBlock_on_largestBlock
+    │   │       📝 The robot will approach the Medium Block, grasp it, then move it to and place it stably
+    │   │       📝               on top of the Large Block. The goal state is that the Medium Block is stably placed on
+    │   │       📝               top of the Large Block. The robot is not holding the Medium Block and is in a stable
+    │   │       📝               standing position near the Large Block, ready to move to the next block.
+    │   │   ├── walk_to_mediumBlock
+    │   │   │       📝 The robot will walk until it is positioned directly next to the Medium Block, ready
+    │   │   │       📝                   to initiate a grasp. The goal state is that the robot's base is within grasping
+    │   │   │       📝                   range of the Medium Block, and the robot is in a stable standing posture.
+    │   │   ├── pick_up_mediumBlock
+    │   │   │       📝 The robot will grasp and lift the Medium Block from its current position. The goal
+    │   │   │       📝                   state is that the robot is stably holding the Medium Block, lifted off the ground,
+    │   │   │       📝                   and is in a stable standing posture, ready for transport.
+    │   │   ├── walk_to_largestBlock
+    │   │   │       📝 The robot, while carrying the Medium Block, will walk until it is positioned
+    │   │   │       📝                   directly next to the Large Block, ready to place the carried block. The goal state
+    │   │   │       📝                   is that the robot's base is within placing range of the Large Block, and the robot
+    │   │   │       📝                   is in a stable standing posture while holding the Medium Block.
+    │   │   └── place_carriedBlock_on_largestBlock
+    │   │           📝 The robot will lower and release the carried Medium Block onto the top surface of
+    │   │           📝                   the Large Block. The goal state is that the Medium Block is stably resting on the
+    │   │           📝                   Large Block, the robot is no longer holding the Medium Block, and is in a stable
+    │   │           📝                   standing posture.
+    │   └── place_smallBlock_on_mediumBlock
+    │           📝 The robot will approach the Small Block, grasp it, then move it to and place it stably
+    │           📝               on top of the Medium Block (which is already on the Large Block). The goal state is that
+    │           📝               the Small Block is stably placed on top of the Medium Block. The robot is not holding
+    │           📝               the Small Block and is in a stable standing position near the constructed stairs, ready
+    │           📝               to begin climbing.
+    │       ├── walk_to_smallBlock
+    │       │       📝 The robot will walk until it is positioned directly next to the Small Block, ready
+    │       │       📝                   to initiate a grasp. The goal state is that the robot's base is within grasping
+    │       │       📝                   range of the Small Block, and the robot is in a stable standing posture.
+    │       ├── pick_up_smallBlock
+    │       │       📝 The robot will grasp and lift the Small Block from its current position. The goal
+    │       │       📝                   state is that the robot is stably holding the Small Block, lifted off the ground,
+    │       │       📝                   and is in a stable standing posture, ready for transport.
+    │       ├── walk_to_mediumBlock
+    │       │       📝 The robot, while carrying the Small Block, will walk until it is positioned directly
+    │       │       📝                   next to the Medium Block (which is on the Large Block), ready to place the carried
+    │       │       📝                   block. The goal state is that the robot's base is within placing range of the Medium
+    │       │       📝                   Block, and the robot is in a stable standing posture while holding the Small Block.
+    │       └── place_carriedBlock_on_mediumBlock
+    │               📝 The robot will lower and release the carried Small Block onto the top surface of the
+    │               📝                   Medium Block. The goal state is that the Small Block is stably resting on the Medium
+    │               📝                   Block, the robot is no longer holding the Small Block, and is in a stable standing
+    │               📝                   posture.
+    └── climb_stair_structure
+            📝 The robot will sequentially jump onto each block of the constructed stair structure,
+            📝           starting from the largest block, then the medium block, and finally the small block,
+            📝           demonstrating the climbability of the stairs. The goal state is that the robot has
+            📝           successfully jumped onto and is stably standing on the Small Block, which is the highest
+            📝           point of the stair structure, completing the task.
+        ├── jump_onto_largestBlock
+        │       📝 The robot will approach the Large Block and jump onto its top surface. The goal state is
+        │       📝               that the robot is stably standing on top of the Large Block, ready to move to the next
+        │       📝               step of the stairs.
+        ├── jump_onto_mediumBlock
+        │       📝 The robot will walk from the Large Block to the Medium Block and jump onto its top
+        │       📝               surface. The goal state is that the robot is stably standing on top of the Medium Block,
+        │       📝               ready to move to the final step of the stairs.
+        └── jump_onto_smallBlock
+                📝 The robot will walk from the Medium Block to the Small Block and jump onto its top
+                📝               surface. The goal state is that the robot is stably standing on top of the Small Block,
+                📝               completing the climb.

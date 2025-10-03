@@ -1,0 +1,214 @@
+{
+  "metadata": {
+    "robot": "G1",
+    "provider": "google",
+    "isaaclab_path": "/home/tomcannon/Documents/GenHRL_v2/IsaacLab",
+    "timestamp": "20250805_200507",
+    "total_experiments": 11,
+    "focus": "generation_only"
+  },
+  "results": [
+    {
+      "task_name": "obstacle_course_seed42",
+      "seed": 42,
+      "generation_success": true,
+      "generation_time": 1780.7867510318756,
+      "generated_skills": [
+        "jump_over_lowWall",
+        "stabilize_on_blockCube",
+        "kick_smallSphere",
+        "JumpOnBlockCube",
+        "jump_on_top_of_blockCube",
+        "walk_to_largeSphere",
+        "walk_to_lowWall",
+        "walk_to_smallSphere",
+        "walk_to_blockCube",
+        "KickSmallSphere",
+        "PushLargeSphere",
+        "push_largeSphere_towards_highWall",
+        "OvercomeLowWall",
+        "stabilize_after_jump",
+        "obstacle_course_seed42"
+      ],
+      "error_message": null
+    },
+    {
+      "task_name": "obstacle_course_seed123",
+      "seed": 123,
+      "generation_success": true,
+      "generation_time": 1438.241082906723,
+      "generated_skills": [
+        "jump_over_lowWall",
+        "obstacle_course_seed123",
+        "jump_on_top_of_blockCube",
+        "walk_to_largeSphere",
+        "Push_LargeSphere_Into_HighWall",
+        "walk_to_lowWall",
+        "walk_to_smallSphere",
+        "Kick_SmallSphere_Away_From_Wall",
+        "walk_to_blockCube",
+        "Navigate_and_Jump_Over_LowWall",
+        "Navigate_and_Jump_On_BlockCube",
+        "push_largeSphere_into_highWall",
+        "kick_smallSphere_away_from_wall",
+        "stabilize_after_jump"
+      ],
+      "error_message": null
+    },
+    {
+      "task_name": "obstacle_course_seed456",
+      "seed": 456,
+      "generation_success": true,
+      "generation_time": 1589.974392414093,
+      "generated_skills": [
+        "jump_over_lowWall",
+        "obstacle_course_seed456",
+        "jump_on_top_of_blockCube",
+        "walk_to_largeSphere",
+        "walk_to_lowWall",
+        "walk_to_smallSphere",
+        "walk_to_blockCube",
+        "Navigate_and_Jump_Over_LowWall",
+        "push_largeSphere_towards_highWall",
+        "Kick_SmallSphere_Away",
+        "Jump_On_Top_of_BlockCube",
+        "Push_LargeSphere_to_Topple_HighWall",
+        "kick_smallSphere_away_from_wall"
+      ],
+      "error_message": null
+    },
+    {
+      "task_name": "move_three_objects_seed42",
+      "seed": 42,
+      "generation_success": true,
+      "generation_time": 1004.7857098579407,
+      "generated_skills": [
+        "walk_to_cube_for_robot_to_push_2",
+        "push_cube_for_robot_to_push_1_towards_platform_for_cubes",
+        "push_cube_for_robot_to_push_2_towards_platform_for_cubes",
+        "walk_to_cube_for_robot_to_push_3",
+        "move_three_objects_seed42",
+        "walk_to_cube_for_robot_to_push_1",
+        "push_cube_for_robot_to_push_2_onto_platform_for_cubes",
+        "push_cube_for_robot_to_push_3_towards_platform_for_cubes",
+        "push_cube_for_robot_to_push_3_onto_platform_for_cubes",
+        "push_cube_for_robot_to_push_1_onto_platform_for_cubes"
+      ],
+      "error_message": null
+    },
+    {
+      "task_name": "move_three_objects_seed123",
+      "seed": 123,
+      "generation_success": true,
+      "generation_time": 1063.6781830787659,
+      "generated_skills": [
+        "push_first_0_5m_cubed_block_towards_platform",
+        "approach_third_0_5m_cubed_block",
+        "move_three_objects_seed123",
+        "push_third_0_5m_cubed_block_towards_platform",
+        "push_first_0_5m_cubed_block_onto_platform",
+        "approach_first_0_5m_cubed_block",
+        "push_second_0_5m_cubed_block_onto_platform",
+        "push_third_0_5m_cubed_block_onto_platform",
+        "approach_second_0_5m_cubed_block",
+        "push_second_0_5m_cubed_block_towards_platform"
+      ],
+      "error_message": null
+    },
+    {
+      "task_name": "move_three_objects_seed456",
+      "seed": 456,
+      "generation_success": true,
+      "generation_time": 1007.0424194335938,
+      "generated_skills": [
+        "push_Third_0_5m_cubed_block_towards_Platform",
+        "push_First_0_5m_cubed_block_towards_Platform",
+        "adjust_First_0_5m_cubed_block_on_Platform",
+        "walk_to_Third_0_5m_cubed_block",
+        "push_Second_0_5m_cubed_block_towards_Platform",
+        "walk_to_Second_0_5m_cubed_block",
+        "walk_to_First_0_5m_cubed_block",
+        "adjust_Third_0_5m_cubed_block_on_Platform",
+        "move_three_objects_seed456",
+        "adjust_Second_0_5m_cubed_block_on_Platform"
+      ],
+      "error_message": null
+    },
+    {
+      "task_name": "doorway_and_goal_seed42",
+      "seed": 42,
+      "generation_success": true,
+      "generation_time": 604.663880109787,
+      "generated_skills": [
+        "approach_doorway_and_align",
+        "doorway_and_goal_seed42",
+        "Walk_to_Small_Block",
+        "Navigate_Doorway",
+        "walk_through_doorway",
+        "walk_to_Small_Block"
+      ],
+      "error_message": null
+    },
+    {
+      "task_name": "doorway_and_goal_seed123",
+      "seed": 123,
+      "generation_success": true,
+      "generation_time": 816.1759536266327,
+      "generated_skills": [
+        "walk_to_doorway_entrance",
+        "navigate_through_doorway",
+        "walk_towards_Small_Block",
+        "walk_clear_of_doorway",
+        "approach_goal_block",
+        "doorway_and_goal_seed123",
+        "walk_through_doorway",
+        "walk_to_Small_Block"
+      ],
+      "error_message": null
+    },
+    {
+      "task_name": "doorway_and_goal_seed456",
+      "seed": 456,
+      "generation_success": true,
+      "generation_time": 591.8765339851379,
+      "generated_skills": [
+        "navigate_through_doorway",
+        "doorway_and_goal_seed456",
+        "walk_to_small_block",
+        "approach_doorway",
+        "walk_through_doorway"
+      ],
+      "error_message": null
+    },
+    {
+      "task_name": "knock_over_pillars_seed42",
+      "seed": 42,
+      "generation_success": true,
+      "generation_time": 961.0658257007599,
+      "generated_skills": [
+        "knock_over_cylinderColumn5",
+        "walk_to_cylinderColumn3",
+        "knock_over_pillars_seed42",
+        "knock_over_cylinderColumn3",
+        "walk_to_cylinderColumn1",
+        "walk_to_cylinderColumn5",
+        "walk_to_cylinderColumn2",
+        "knock_over_cylinderColumn4",
+        "knock_over_cylinderColumn1",
+        "knock_over_cylinderColumn2",
+        "walk_to_cylinderColumn4"
+      ],
+      "error_message": null
+    },
+    {
+      "task_name": "knock_over_pillars_seed123",
+      "seed": 123,
+      "generation_success": true,
+      "generation_time": 137.946359872818,
+      "generated_skills": [
+        "knock_over_all_cylinder_columns"
+      ],
+      "error_message": null
+    }
+  ]
+}

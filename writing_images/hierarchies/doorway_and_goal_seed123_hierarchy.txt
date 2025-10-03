@@ -1,0 +1,27 @@
+
+====================================================================================================
+📁 TASK: doorway_and_goal_seed123
+====================================================================================================
+📋 The robot should walk through the doorway and then walk to the small block.
+
+└── doorway_and_goal_seed123
+        📝 The robot should walk through the doorway and then walk to the small block.
+    ├── pass_through_doorway
+    │       📝 The robot should navigate through the doorway formed by Wall1 and Wall2.
+    │   ├── walk_to_doorwayEntrance
+    │   │       📝 The robot should walk towards the doorway, positioning itself directly in front of the
+    │   │       📝               gap between Wall1 and Wall2. The goal state is for the robot to be centered horizontally
+    │   │       📝               with the doorway gap and close enough to begin walking through it.
+    │   │       🔧 Object config: 1 path(s)
+    │   └── walk_through_doorwayGap
+    │           📝 From the doorway entrance, the robot should walk forward, passing completely through the
+    │           📝               gap between Wall1 and Wall2. The goal state is for the robot to be fully on the opposite
+    │           📝               side of the doorway, clear of both walls, and in a stable standing position.
+    │           🔧 Object config: 1 path(s)
+    └── walk_to_smallBlock
+            📝 The robot should walk from its current position past the doorway to the small block.
+        └── approach_smallBlock
+                📝 The robot should walk directly towards the smallBlock. The goal state is for the robot
+                📝               to be standing directly adjacent to the smallBlock, within a close proximity suitable
+                📝               for interaction or simply marking the end of the path.
+                🔧 Object config: 1 path(s)

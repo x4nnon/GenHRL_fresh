@@ -1,0 +1,57 @@
+
+====================================================================================================
+📁 TASK: knock_over_pillars_seed456
+====================================================================================================
+📋 The robot should walk to each of the five cylinder columns in turn and knock them over such that
+all five are on the floor. The goal state is achieved when all cylinder columns are lying on the
+floor.
+
+└── knock_over_pillars_seed456
+        📝 The robot should walk to each of the five cylinder columns in turn and knock them over such that
+        📝       all five are on the floor. The goal state is achieved when all cylinder columns are lying on the
+        📝       floor.
+    ├── walk_to_nearestStandingCylinderColumn
+    │       📝 The robot should walk towards the nearest cylinder column that is currently standing
+    │       📝           upright, stopping when it is in a suitable position to interact with it.
+    ├── orient_body_to_nearestStandingCylinderColumn
+    │       📝 The robot should adjust its body orientation to face the nearest standing cylinder column,
+    │       📝           ensuring it is in an optimal position for pushing.
+    ├── push_nearestStandingCylinderColumn
+    │       📝 The robot should use its body or limbs to apply force to the nearest standing cylinder
+    │       📝           column, causing it to fall over and lie on the floor.
+    ├── walk_to_nearestStandingCylinderColumn
+    │       📝 The robot should walk towards the nearest cylinder column that is currently standing
+    │       📝           upright, stopping when it is in a suitable position to interact with it.
+    ├── orient_body_to_nearestStandingCylinderColumn
+    │       📝 The robot should adjust its body orientation to face the nearest standing cylinder column,
+    │       📝           ensuring it is in an optimal position for pushing.
+    ├── push_nearestStandingCylinderColumn
+    │       📝 The robot should use its body or limbs to apply force to the nearest standing cylinder
+    │       📝           column, causing it to fall over and lie on the floor.
+    ├── walk_to_nearestStandingCylinderColumn
+    │       📝 The robot should walk towards the nearest cylinder column that is currently standing
+    │       📝           upright, stopping when it is in a suitable position to interact with it.
+    ├── orient_body_to_nearestStandingCylinderColumn
+    │       📝 The robot should adjust its body orientation to face the nearest standing cylinder column,
+    │       📝           ensuring it is in an optimal position for pushing.
+    ├── push_nearestStandingCylinderColumn
+    │       📝 The robot should use its body or limbs to apply force to the nearest standing cylinder
+    │       📝           column, causing it to fall over and lie on the floor.
+    ├── walk_to_nearestStandingCylinderColumn
+    │       📝 The robot should walk towards the nearest cylinder column that is currently standing
+    │       📝           upright, stopping when it is in a suitable position to interact with it.
+    ├── orient_body_to_nearestStandingCylinderColumn
+    │       📝 The robot should adjust its body orientation to face the nearest standing cylinder column,
+    │       📝           ensuring it is in an optimal position for pushing.
+    ├── push_nearestStandingCylinderColumn
+    │       📝 The robot should use its body or limbs to apply force to the nearest standing cylinder
+    │       📝           column, causing it to fall over and lie on the floor.
+    ├── walk_to_nearestStandingCylinderColumn
+    │       📝 The robot should walk towards the nearest cylinder column that is currently standing
+    │       📝           upright, stopping when it is in a suitable position to interact with it.
+    ├── orient_body_to_nearestStandingCylinderColumn
+    │       📝 The robot should adjust its body orientation to face the nearest standing cylinder column,
+    │       📝           ensuring it is in an optimal position for pushing.
+    └── push_nearestStandingCylinderColumn
+            📝 The robot should use its body or limbs to apply force to the nearest standing cylinder
+            📝           column, causing it to fall over and lie on the floor.

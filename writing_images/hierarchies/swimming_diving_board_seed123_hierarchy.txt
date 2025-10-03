@@ -1,0 +1,48 @@
+
+====================================================================================================
+📁 TASK: swimming_diving_board_seed123
+====================================================================================================
+📋 The robot should walk up two rectangular blocks (one 0.3m high, one 0.6m high), which are 2m
+wide and positioned next to each other. It should then walk onto a heavy, balanced 'diving
+board' platform located on the top block. The robot must walk along this diving board to its
+end, where a small cone is balanced. The robot should then kick this small cone into the
+'swimming pool'. After kicking the cone, the robot must perform a diving motion from the diving
+board into the 'swimming pool' (represented by a 0.01m high, 4mx4m square plane). Finally, the
+robot should act like it is swimming in the pool. The end state requires the small cone to be in
+the swimming pool and the robot to be performing a swimming motion within the pool.
+
+└── swimming_diving_board_seed123
+        📝 The robot should walk up two rectangular blocks (one 0.3m high, one 0.6m high), which are 2m
+        📝       wide and positioned next to each other. It should then walk onto a heavy, balanced 'diving
+        📝       board' platform located on the top block. The robot must walk along this diving board to its
+        📝       end, where a small cone is balanced. The robot should then kick this small cone into the
+        📝       'swimming pool'. After kicking the cone, the robot must perform a diving motion from the diving
+        📝       board into the 'swimming pool' (represented by a 0.01m high, 4mx4m square plane). Finally, the
+        📝       robot should act like it is swimming in the pool. The end state requires the small cone to be in
+        📝       the swimming pool and the robot to be performing a swimming motion within the pool.
+    ├── walk_to_lowBlock
+    │       📝 The robot should walk towards and position itself in front of the lower rectangular block
+    │       📝           (Object1) to prepare for climbing it.
+    ├── walk_up_lowBlock
+    │       📝 The robot should walk up and fully ascend the lower rectangular block (Object1), ensuring
+    │       📝           both feet are on top of the block.
+    ├── walk_up_highBlock
+    │       📝 From the top of the lower block, the robot should walk up and fully ascend the higher
+    │       📝           rectangular block (Object2), ensuring both feet are on top of the block.
+    ├── walk_onto_divingBoard
+    │       📝 From the top of the high block, the robot should walk onto the heavy, balanced 'diving
+    │       📝           board' platform (Object3), ensuring both feet are fully on the board.
+    ├── walk_along_divingBoard_to_smallCone
+    │       📝 The robot should walk along the 'diving board' platform (Object3) until it reaches the end
+    │       📝           where the small cone (Object5) is balanced, positioning itself appropriately to kick the
+    │       📝           cone.
+    ├── kick_smallCone_into_swimmingPool
+    │       📝 The robot should use one of its legs to kick the small cone (Object5) from the end of the
+    │       📝           diving board into the 'swimming pool' (Object4).
+    ├── dive_from_divingBoard_into_swimmingPool
+    │       📝 After kicking the cone, the robot should perform a controlled diving motion from the end of
+    │       📝           the 'diving board' (Object3) into the 'swimming pool' (Object4), aiming for a head-first
+    │       📝           entry.
+    └── perform_swimming_motion_in_swimmingPool
+            📝 Once in the 'swimming pool' (Object4), the robot should perform a continuous swimming
+            📝           motion, simulating movement through water.

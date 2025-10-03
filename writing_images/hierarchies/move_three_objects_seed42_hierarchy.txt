@@ -1,0 +1,55 @@
+
+====================================================================================================
+📁 TASK: move_three_objects_seed42
+====================================================================================================
+📋 The robot should move each of the three cubes (Object1, Object2, Object3) from their start
+locations onto the platform (Object4) by pushing them individually.
+
+└── move_three_objects_seed42
+        📝 The robot should move each of the three cubes (Object1, Object2, Object3) from their start
+        📝       locations onto the platform (Object4) by pushing them individually.
+    ├── approach_Object1
+    │       📝 The robot should walk to a position near Object1, preparing to interact with it. The goal
+    │       📝           state is for the robot to be within a short, pushable distance of Object1, ready for the
+    │       📝           next skill.
+    │       🔧 Object config: 1 path(s)
+    ├── position_robot_behind_Object1_facing_Object4
+    │       📝 The robot should maneuver itself to be directly behind Object1, with its body oriented
+    │       📝           towards Object4 (the platform). The goal state is for the robot to be in a stable pushing
+    │       📝           stance, aligned to push Object1 directly towards Object4.
+    │       🔧 Object config: 1 path(s)
+    ├── push_Object1_towards_Object4
+    │       📝 The robot should apply force to Object1, pushing it across the ground until it reaches and
+    │       📝           is positioned on top of Object4. The goal state is for Object1 to be stably resting on
+    │       📝           Object4.
+    │       🔧 Object config: 1 path(s)
+    ├── approach_Object2
+    │       📝 The robot should walk to a position near Object2, preparing to interact with it. The goal
+    │       📝           state is for the robot to be within a short, pushable distance of Object2, ready for the
+    │       📝           next skill.
+    │       🔧 Object config: 1 path(s)
+    ├── position_robot_behind_Object2_facing_Object4
+    │       📝 The robot should maneuver itself to be directly behind Object2, with its body oriented
+    │       📝           towards Object4 (the platform). The goal state is for the robot to be in a stable pushing
+    │       📝           stance, aligned to push Object2 directly towards Object4.
+    │       🔧 Object config: 1 path(s)
+    ├── push_Object2_towards_Object4
+    │       📝 The robot should apply force to Object2, pushing it across the ground until it reaches and
+    │       📝           is positioned on top of Object4. The goal state is for Object2 to be stably resting on
+    │       📝           Object4.
+    │       🔧 Object config: 1 path(s)
+    ├── approach_Object3
+    │       📝 The robot should walk to a position near Object3, preparing to interact with it. The goal
+    │       📝           state is for the robot to be within a short, pushable distance of Object3, ready for the
+    │       📝           next skill.
+    │       🔧 Object config: 1 path(s)
+    ├── position_robot_behind_Object3_facing_Object4
+    │       📝 The robot should maneuver itself to be directly behind Object3, with its body oriented
+    │       📝           towards Object4 (the platform). The goal state is for the robot to be in a stable pushing
+    │       📝           stance, aligned to push Object3 directly towards Object4.
+    │       🔧 Object config: 1 path(s)
+    └── push_Object3_towards_Object4
+            📝 The robot should apply force to Object3, pushing it across the ground until it reaches and
+            📝           is positioned on top of Object4. The goal state is for Object3 to be stably resting on
+            📝           Object4.
+            🔧 Object config: 1 path(s)

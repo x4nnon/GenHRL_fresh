@@ -1,0 +1,30 @@
+{
+  "name": "genhrl-ui",
+  "version": "1.0.0",
+  "description": "User interface for GenHRL task generation and management",
+  "main": "server/app.py",
+  "scripts": {
+    "prestart": "../kill-dev-ports.sh",
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "dev": "npm run clean-ports && npm start",
+    "clean-start": "../kill-dev-ports.sh && concurrently \"npm run server\" \"npm run client\"",
+    "clean-ports": "../kill-dev-ports.sh",
+    "server": "cd server && python3 app.py",
+    "client": "cd client && npm start",
+    "build": "cd client && npm run build",
+    "install-all": "pip install -r requirements.txt && cd client && npm install"
+  },
+  "dependencies": {
+    "concurrently": "^7.6.0"
+  },
+  "keywords": [
+    "genhrl",
+    "reinforcement-learning",
+    "task-generation",
+    "ui",
+    "flask",
+    "react"
+  ],
+  "author": "GenHRL Team",
+  "license": "MIT"
+}

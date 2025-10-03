@@ -1,0 +1,81 @@
+{
+  "metadata": {
+    "robot": "G1",
+    "provider": "google",
+    "isaaclab_path": "/home/tomcannon/Documents/GenHRL_v2/IsaacLab",
+    "timestamp": "20250805_182200",
+    "total_experiments": 3,
+    "focus": "generation_only"
+  },
+  "results": [
+    {
+      "task_name": "obstacle_course_seed42",
+      "seed": 42,
+      "generation_success": true,
+      "generation_time": 1780.7867510318756,
+      "generated_skills": [
+        "jump_over_lowWall",
+        "stabilize_on_blockCube",
+        "kick_smallSphere",
+        "JumpOnBlockCube",
+        "jump_on_top_of_blockCube",
+        "walk_to_largeSphere",
+        "walk_to_lowWall",
+        "walk_to_smallSphere",
+        "walk_to_blockCube",
+        "KickSmallSphere",
+        "PushLargeSphere",
+        "push_largeSphere_towards_highWall",
+        "OvercomeLowWall",
+        "stabilize_after_jump",
+        "obstacle_course_seed42"
+      ],
+      "error_message": null
+    },
+    {
+      "task_name": "obstacle_course_seed123",
+      "seed": 123,
+      "generation_success": true,
+      "generation_time": 1438.241082906723,
+      "generated_skills": [
+        "jump_over_lowWall",
+        "obstacle_course_seed123",
+        "jump_on_top_of_blockCube",
+        "walk_to_largeSphere",
+        "Push_LargeSphere_Into_HighWall",
+        "walk_to_lowWall",
+        "walk_to_smallSphere",
+        "Kick_SmallSphere_Away_From_Wall",
+        "walk_to_blockCube",
+        "Navigate_and_Jump_Over_LowWall",
+        "Navigate_and_Jump_On_BlockCube",
+        "push_largeSphere_into_highWall",
+        "kick_smallSphere_away_from_wall",
+        "stabilize_after_jump"
+      ],
+      "error_message": null
+    },
+    {
+      "task_name": "obstacle_course_seed456",
+      "seed": 456,
+      "generation_success": true,
+      "generation_time": 1589.974392414093,
+      "generated_skills": [
+        "jump_over_lowWall",
+        "obstacle_course_seed456",
+        "jump_on_top_of_blockCube",
+        "walk_to_largeSphere",
+        "walk_to_lowWall",
+        "walk_to_smallSphere",
+        "walk_to_blockCube",
+        "Navigate_and_Jump_Over_LowWall",
+        "push_largeSphere_towards_highWall",
+        "Kick_SmallSphere_Away",
+        "Jump_On_Top_of_BlockCube",
+        "Push_LargeSphere_to_Topple_HighWall",
+        "kick_smallSphere_away_from_wall"
+      ],
+      "error_message": null
+    }
+  ]
+}

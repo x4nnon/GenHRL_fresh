@@ -1,0 +1,258 @@
+{
+  "metadata": {
+    "robot": "G1",
+    "provider": "google",
+    "isaaclab_path": "/home/tomcannon/Documents/GenHRL_v2/IsaacLab",
+    "timestamp": "20250801_162546",
+    "total_experiments": 11,
+    "focus": "generation_only"
+  },
+  "results": [
+    {
+      "task_name": "obstacle_course_seed42",
+      "seed": 42,
+      "generation_success": true,
+      "generation_time": 1793.6074662208557,
+      "generated_skills": [
+        "jump_over_lowWall",
+        "position_to_jump_onto_block",
+        "stabilize_after_lowWall_jump",
+        "walk_to_largeSphere",
+        "walk_to_lowWall",
+        "walk_to_smallSphere",
+        "KickSmallSphere",
+        "JumpOverLowWall",
+        "PushLargeSphere",
+        "jump_onto_block",
+        "stabilize_on_block",
+        "push_largeSphere_into_highWall",
+        "position_to_push_largeSphere",
+        "JumpOntoBlock",
+        "walk_to_block",
+        "kick_smallSphere_away_from_wall",
+        "position_to_kick_smallSphere",
+        "obstacle_course_seed42"
+      ],
+      "error_message": null
+    },
+    {
+      "task_name": "obstacle_course_seed123",
+      "seed": 123,
+      "generation_success": true,
+      "generation_time": 1761.0692541599274,
+      "generated_skills": [
+        "jump_over_lowWall",
+        "ascend_block",
+        "manipulate_largeSphere",
+        "obstacle_course_seed123",
+        "interact_smallSphere",
+        "walk_to_largeSphere",
+        "walk_to_lowWall",
+        "walk_to_smallSphere",
+        "traverse_lowWall",
+        "jump_onto_block",
+        "stabilize_on_block",
+        "kick_smallSphere_awayFrom_wall",
+        "push_largeSphere_into_highWall",
+        "walk_to_block",
+        "walk_past_lowWall"
+      ],
+      "error_message": null
+    },
+    {
+      "task_name": "obstacle_course_seed456",
+      "seed": 456,
+      "generation_success": true,
+      "generation_time": 1663.050814628601,
+      "generated_skills": [
+        "WalkToSmallSphere",
+        "WalkToLowWall",
+        "LandAfterJump",
+        "obstacle_course_seed456",
+        "ExecuteKickOnSmallSphere",
+        "PushLargeSphereToHighWall",
+        "PositionBehindLargeSphereFacingHighWall",
+        "PositionNextToSmallSphere",
+        "KickSmallSphere",
+        "JumpOverLowWall",
+        "WalkTo0_5x0_5x0_5Block",
+        "ExecuteJumpOverLowWall",
+        "ExecuteJumpOnTopOf0_5x0_5x0_5Block",
+        "ContinuePushingLargeSphereUntilHighWallFalls",
+        "WalkToLargeSphere",
+        "PushLargeSphereTowardsHighWall",
+        "JumpOnTargetBlock",
+        "PositionInFrontOf0_5x0_5x0_5Block"
+      ],
+      "error_message": null
+    },
+    {
+      "task_name": "build_stairs_seed42",
+      "seed": 42,
+      "generation_success": true,
+      "generation_time": 4604.271753072739,
+      "generated_skills": [
+        "climb_onto_medium_block",
+        "arrange_blocks_into_stairs",
+        "move_small_block_to_start_position",
+        "climb_onto_small_block",
+        "climb_arranged_stairs",
+        "build_stairs_seed42",
+        "climb_onto_largest_block",
+        "move_largest_block_to_third_step",
+        "move_medium_block_to_second_step"
+      ],
+      "error_message": null
+    },
+    {
+      "task_name": "build_stairs_seed123",
+      "seed": 123,
+      "generation_success": true,
+      "generation_time": 2485.6287240982056,
+      "generated_skills": [
+        "pick_up_mediumBlock",
+        "arrange_blocks_into_stairs",
+        "pick_up_smallBlock",
+        "walk_to_frontOf_smallBlock",
+        "walk_to_largestBlock",
+        "arrange_largestBlock",
+        "place_carriedBlock_behind_mediumBlock",
+        "place_carriedBlock_inFrontOf_robot",
+        "step_onto_largestBlock",
+        "step_onto_mediumBlock",
+        "arrange_mediumBlock",
+        "walk_to_mediumBlock",
+        "build_stairs_seed123",
+        "place_carriedBlock_behind_smallBlock",
+        "climb_largestBlock",
+        "climb_stairs",
+        "climb_smallBlock",
+        "step_onto_smallBlock",
+        "arrange_smallBlock",
+        "pick_up_largestBlock",
+        "walk_to_smallBlock",
+        "climb_mediumBlock"
+      ],
+      "error_message": null
+    },
+    {
+      "task_name": "build_stairs_seed456",
+      "seed": 456,
+      "generation_success": true,
+      "generation_time": 1938.3913083076477,
+      "generated_skills": [
+        "arrange_blocks_into_stairs",
+        "walk_to_largestBlock",
+        "push_smallBlock_to_targetStairPosition",
+        "walk_to_mediumBlock",
+        "build_stairs_seed456",
+        "climb_stairs",
+        "climb_onto_largestBlock",
+        "walk_to_baseOf_smallBlock",
+        "climb_onto_smallBlock",
+        "push_mediumBlock_to_positionNextTo_smallBlock",
+        "walk_to_smallBlock",
+        "walk_across_mediumBlock_to_edgeOf_largestBlock",
+        "climb_onto_mediumBlock",
+        "push_largestBlock_to_positionNextTo_mediumBlock",
+        "walk_across_smallBlock_to_edgeOf_mediumBlock"
+      ],
+      "error_message": null
+    },
+    {
+      "task_name": "move_three_objects_seed42",
+      "seed": 42,
+      "generation_success": true,
+      "generation_time": 1125.9698054790497,
+      "generated_skills": [
+        "align_robot_with_nearestSquareBlock",
+        "push_nearestSquareBlock_towards_Platform",
+        "move_three_objects_seed42",
+        "walk_to_nearestSquareBlock",
+        "push_nearestSquareBlock_onto_Platform",
+        "walk_to_Platform",
+        "walk_to_groupOfSquareBlocks",
+        "orient_robot_towards_Platform"
+      ],
+      "error_message": null
+    },
+    {
+      "task_name": "move_three_objects_seed123",
+      "seed": 123,
+      "generation_success": true,
+      "generation_time": 496.6285011768341,
+      "generated_skills": [
+        "push_nearest_block_onto_platform",
+        "reposition_for_next_block",
+        "move_three_objects_seed123",
+        "approach_initial_blocks"
+      ],
+      "error_message": null
+    },
+    {
+      "task_name": "move_three_objects_seed456",
+      "seed": 456,
+      "generation_success": true,
+      "generation_time": 670.4117288589478,
+      "generated_skills": [
+        "walk_to_nearestBlock",
+        "walk_to_PlatformEdge",
+        "push_nearestBlock_towards_Platform",
+        "walk_to_threeBlocks",
+        "move_three_objects_seed456",
+        "orient_robot_towards_Platform"
+      ],
+      "error_message": null
+    },
+    {
+      "task_name": "doorway_and_goal_seed42",
+      "seed": 42,
+      "generation_success": true,
+      "generation_time": 1869.818596124649,
+      "generated_skills": [
+        "ManipulateBlock",
+        "walk_to_blockToBePushed",
+        "orient_robotBehind_blockToBePushed",
+        "walk_to_leftWallOfDoorway",
+        "PositionFirstWall",
+        "ApproachBlock",
+        "PassThrough",
+        "walk_to_rightWallOfDoorway",
+        "doorway_and_goal_seed42",
+        "walk_to_doorwayEntrance",
+        "ConstructDoorway",
+        "ApproachDoorway",
+        "TraverseDoorway",
+        "PushBlock",
+        "push_blockToBePushed_towards_doorway",
+        "push_blockToBePushed_through_doorwayGap",
+        "PositionSecondWall",
+        "walk_through_doorway",
+        "push_leftWallOfDoorway_to_leftOfDoorwayCenter",
+        "push_rightWallOfDoorway_to_rightOfLeftWallOfDoorway_creatingOneMeterGap"
+      ],
+      "error_message": null
+    },
+    {
+      "task_name": "doorway_and_goal_seed123",
+      "seed": 123,
+      "generation_success": true,
+      "generation_time": 1444.9321143627167,
+      "generated_skills": [
+        "walk_to_wallTwo",
+        "traverse_doorway",
+        "walk_to_squareBlock",
+        "create_doorway",
+        "walk_to_doorwayEntrance",
+        "push_squareBlock_into_doorway",
+        "push_wallOne_to_leftDoorwayPosition",
+        "doorway_and_goal_seed123",
+        "push_squareBlock_into_doorwayGap",
+        "walk_through_doorway",
+        "push_wallTwo_to_rightDoorwayPosition",
+        "walk_to_wallOne"
+      ],
+      "error_message": null
+    }
+  ]
+}

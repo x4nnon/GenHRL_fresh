@@ -1,0 +1,9 @@
+The scene should consists of a cone, a cylinder and a cube. These should be positioned in a triangle around the robot. Each 4m from the robot. 
+
+The robot should first walk to the cone, the cylinder and then the cube. 
+
+Success when getting to each object should be determined by being within 1m of the object. 
+
+After walking to each object. The robot should walk to where it started (0,0) in x and y. 
+
+Then it should jump up and down.

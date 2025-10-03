@@ -1,0 +1,97 @@
+
+====================================================================================================
+📁 TASK: build_stairs_seed42
+====================================================================================================
+📋 Arrange the blocks to form climbable stairs and then climb them.
+
+└── build_stairs_seed42
+        📝 Arrange the blocks to form climbable stairs and then climb them.
+    ├── build_staircase_with_blocks
+    │       📝 Arrange the smallBlock, mediumBlock, and largestBlock to form a climbable staircase.
+    │   ├── walk_to_smallBlock
+    │   │       📝 The robot walks to the smallestBlock (0.3m height) from its current position. Goal
+    │   │       📝               State: Robot is positioned directly in front of and close to the smallestBlock, ready to
+    │   │       📝               interact with it. This allows for immediate grasping of the block.
+    │   │       🔧 Object config: 1 path(s)
+    │   ├── pick_up_smallBlock
+    │   │       📝 The robot grasps and lifts the smallestBlock from its initial position. Goal State: The
+    │   │       📝               smallestBlock is securely held by the robot, lifted off the ground. This enables the
+    │   │       📝               robot to transport the block.
+    │   │       🔧 Object config: 1 path(s)
+    │   ├── walk_to_initialStairPosition
+    │   │       📝 The robot walks to a designated initial position for the first step of the stairs while
+    │   │       📝               holding the smallestBlock. Goal State: Robot is positioned at the intended location for
+    │   │       📝               the base of the stairs, holding the smallestBlock. This prepares the robot for placing
+    │   │       📝               the first block.
+    │   │       🔧 Object config: 1 path(s)
+    │   ├── place_smallBlock_at_initialStairPosition
+    │   │       📝 The robot carefully places the smallestBlock onto the ground at the initial stair
+    │   │       📝               position. Goal State: The smallestBlock is resting stably on the ground at the
+    │   │       📝               designated initial stair position. This completes the placement of the first stair step.
+    │   │       🔧 Object config: 1 path(s)
+    │   ├── walk_to_mediumBlock
+    │   │       📝 The robot walks to the mediumBlock (0.6m height) from its current position. Goal State:
+    │   │       📝               Robot is positioned directly in front of and close to the mediumBlock, ready to interact
+    │   │       📝               with it. This allows for immediate grasping of the block.
+    │   │       🔧 Object config: 1 path(s)
+    │   ├── pick_up_mediumBlock
+    │   │       📝 The robot grasps and lifts the mediumBlock from its initial position. Goal State: The
+    │   │       📝               mediumBlock is securely held by the robot, lifted off the ground. This enables the robot
+    │   │       📝               to transport the block.
+    │   │       🔧 Object config: 1 path(s)
+    │   ├── walk_to_position_next_to_smallBlock
+    │   │       📝 The robot walks to a position adjacent to the smallestBlock, while holding the
+    │   │       📝               mediumBlock. Goal State: Robot is positioned at the intended location for the second
+    │   │       📝               stair step, next to the smallestBlock, holding the mediumBlock. This prepares the robot
+    │   │       📝               for placing the second block.
+    │   │       🔧 Object config: 1 path(s)
+    │   ├── place_mediumBlock_next_to_smallBlock
+    │   │       📝 The robot places the mediumBlock next to the smallestBlock, forming the second step of
+    │   │       📝               the stairs. Goal State: The mediumBlock is resting stably on the ground, adjacent to the
+    │   │       📝               smallestBlock, forming a distinct second step. This completes the placement of the
+    │   │       📝               second stair step.
+    │   │       🔧 Object config: 1 path(s)
+    │   ├── walk_to_largestBlock
+    │   │       📝 The robot walks to the largestBlock (0.9m height) from its current position. Goal State:
+    │   │       📝               Robot is positioned directly in front of and close to the largestBlock, ready to
+    │   │       📝               interact with it. This allows for immediate grasping of the block.
+    │   │       🔧 Object config: 1 path(s)
+    │   ├── pick_up_largestBlock
+    │   │       📝 The robot grasps and lifts the largestBlock from its initial position. Goal State: The
+    │   │       📝               largestBlock is securely held by the robot, lifted off the ground. This enables the
+    │   │       📝               robot to transport the block.
+    │   │       🔧 Object config: 1 path(s)
+    │   ├── walk_to_position_next_to_mediumBlock
+    │   │       📝 The robot walks to a position adjacent to the mediumBlock, while holding the
+    │   │       📝               largestBlock. Goal State: Robot is positioned at the intended location for the third
+    │   │       📝               stair step, next to the mediumBlock, holding the largestBlock. This prepares the robot
+    │   │       📝               for placing the third block.
+    │   │       🔧 Object config: 1 path(s)
+    │   └── place_largestBlock_next_to_mediumBlock
+    │           📝 The robot places the largestBlock next to the mediumBlock, forming the third step of the
+    │           📝               stairs. Goal State: The largestBlock is resting stably on the ground, adjacent to the
+    │           📝               mediumBlock, completing the three-step staircase. This signifies the completion of the
+    │           📝               staircase construction.
+    │           🔧 Object config: 1 path(s)
+    └── climb_built_staircase
+            📝 Ascend the constructed staircase by jumping onto each block in sequence.
+        ├── walk_to_base_of_smallBlock
+        │       📝 The robot walks to the ground level directly in front of the smallestBlock, which is the
+        │       📝               first step of the staircase. Goal State: Robot is positioned on the ground, directly in
+        │       📝               front of the smallestBlock, ready to initiate a jump. This sets up the robot for the
+        │       📝               first climb.
+        │       🔧 Object config: 1 path(s)
+        ├── jump_onto_smallBlock
+        │       📝 The robot jumps onto the top surface of the smallestBlock. Goal State: Robot is standing
+        │       📝               stably on top of the smallestBlock. This completes the first step of climbing.
+        │       🔧 Object config: 1 path(s)
+        ├── jump_onto_mediumBlock
+        │       📝 The robot jumps from the smallestBlock onto the top surface of the mediumBlock. Goal
+        │       📝               State: Robot is standing stably on top of the mediumBlock. This completes the second
+        │       📝               step of climbing.
+        │       🔧 Object config: 1 path(s)
+        └── jump_onto_largestBlock
+                📝 The robot jumps from the mediumBlock onto the top surface of the largestBlock. Goal
+                📝               State: Robot is standing stably on top of the largestBlock. This signifies the
+                📝               successful completion of climbing the entire staircase.
+                🔧 Object config: 1 path(s)

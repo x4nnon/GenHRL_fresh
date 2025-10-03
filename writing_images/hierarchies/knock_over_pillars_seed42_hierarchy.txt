@@ -1,0 +1,12 @@
+
+====================================================================================================
+📁 TASK: knock_over_pillars_seed42
+====================================================================================================
+📋 The robot should sequentially approach each of the five CylinderColumns, walk to them, and then
+apply force to knock each one over such that it rests on the floor. This process should be
+repeated for all five CylinderColumns until they are all knocked down.
+
+└── knock_over_all_CylinderColumns
+        📝 The robot should sequentially approach each of the five CylinderColumns, walk to them, and then
+        📝       apply force to knock each one over such that it rests on the floor. This process should be
+        📝       repeated for all five CylinderColumns until they are all knocked down.

@@ -1,0 +1,44 @@
+
+====================================================================================================
+📁 TASK: move_three_objects_seed123
+====================================================================================================
+📋 The robot should move each of the three cubes from their starting locations onto the platform by
+pushing them individually.
+
+└── move_three_objects_seed123
+        📝 The robot should move each of the three cubes from their starting locations onto the platform by
+        📝       pushing them individually.
+    ├── walk_to_nearestCube
+    │       📝 The robot should walk towards the nearest available cube until it is within a suitable
+    │       📝           pushing distance. The goal state is for the robot to be positioned directly in front of and
+    │       📝           close to the nearestCube, ready to initiate a push. This state provides the initial position
+    │       📝           for the subsequent alignment skill.
+    │       🔧 Object config: 1 path(s)
+    ├── align_robot_with_nearestCube_and_platform
+    │       📝 The robot should adjust its body and orientation to be directly behind the nearestCube, with
+    │       📝           its body aligned along the vector from the nearestCube to the platform, ensuring an
+    │       📝           effective pushing angle. The goal state is for the robot to be stably positioned and
+    │       📝           oriented to push the nearestCube directly towards the platform. This state is crucial for
+    │       📝           the subsequent pushing action.
+    │       🔧 Object config: 1 path(s)
+    ├── push_nearestCube_towards_platform
+    │       📝 The robot should apply force to the nearestCube, pushing it in a straight line towards the
+    │       📝           platform. The goal state is for the nearestCube to have moved a significant distance towards
+    │       📝           the platform, or until it encounters an obstacle or reaches the platform. The robot should
+    │       📝           maintain contact with the cube during the push and end in a stable position, potentially
+    │       📝           still in contact with the cube or slightly behind it, ready for repositioning or another
+    │       📝           push.
+    │       🔧 Object config: 1 path(s)
+    ├── reposition_robot_around_nearestCube
+    │       📝 The robot should move around the nearestCube to find a new optimal pushing position,
+    │       📝           typically behind the cube and aligned with the platform, without losing significant progress
+    │       📝           on the cube's movement. The goal state is for the robot to be in a stable position, ready to
+    │       📝           initiate another push on the nearestCube towards the platform. This skill allows for
+    │       📝           iterative pushing if a single push is insufficient.
+    │       🔧 Object config: 1 path(s)
+    └── move_away_from_platform
+            📝 After successfully pushing a cube onto the platform, the robot should move a short distance
+            📝           away from the platform to clear the area and prepare for the next cube. The goal state is
+            📝           for the robot to be in a stable position, clear of the platform and the recently moved cube,
+            📝           ready to walk towards the next nearest cube.
+            🔧 Object config: 1 path(s)

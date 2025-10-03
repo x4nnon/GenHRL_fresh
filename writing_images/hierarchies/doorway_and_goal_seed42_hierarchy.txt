@@ -1,0 +1,67 @@
+
+====================================================================================================
+📁 TASK: doorway_and_goal_seed42
+====================================================================================================
+📋 The robot should walk through the doorway formed by two heavy cubes and then walk to the small
+block.
+
+└── doorway_and_goal_seed42
+        📝 The robot should walk through the doorway formed by two heavy cubes and then walk to the small
+        📝       block.
+    ├── navigate_through_doorway
+    │       📝 The robot should successfully pass through the gap between Object1 and Object2, ending on
+    │       📝           the opposite side of the doorway.
+    │   ├── approach_doorway
+    │   │       📝 The robot should walk towards the doorway gap formed by Object1 and Object2, positioning
+    │   │       📝               itself directly in front of the center of the gap, ready to pass through. The goal state
+    │   │       📝               is the robot's base being centered with the doorway gap, a short distance before it.
+    │   │   ├── walk_to_centerOf_doorwayGap
+    │   │   │       📝 The robot should walk until its base is aligned with the center point of the gap
+    │   │   │       📝                   between Object1 and Object2, but still in front of the doorway. The goal state is
+    │   │   │       📝                   the robot's base being horizontally centered with the doorway gap.
+    │   │   │       🔧 Object config: 1 path(s)
+    │   │   └── adjust_position_to_alignWith_doorwayGap
+    │   │           📝 The robot should make minor forward/backward adjustments to be at an optimal
+    │   │           📝                   distance directly in front of the doorway gap, ready to initiate walking through.
+    │   │           📝                   The goal state is the robot's base being at a suitable starting distance from the
+    │   │           📝                   doorway, centered.
+    │   │           🔧 Object config: 1 path(s)
+    │   └── pass_through_doorway
+    │           📝 The robot should walk forward through the doorway gap, clearing both Object1 and
+    │           📝               Object2. The goal state is the robot's base being completely past the doorway, on the
+    │           📝               other side.
+    │       ├── walk_through_doorwayGap
+    │       │       📝 The robot should walk forward, passing through the opening between Object1 and
+    │       │       📝                   Object2. The goal state is the robot's base being fully through the doorway, but not
+    │       │       📝                   yet far past it.
+    │       │       🔧 Object config: 1 path(s)
+    │       └── adjust_position_past_doorwayGap
+    │               📝 The robot should take a few more steps to ensure it is completely clear of the
+    │               📝                   doorway and in a stable position to begin the next task. The goal state is the
+    │               📝                   robot's base being a short, safe distance past the doorway.
+    │               🔧 Object config: 1 path(s)
+    └── navigate_to_smallBlock
+            📝 The robot should walk from its current position past the doorway to the smallBlock
+            📝           (Object3).
+        ├── approach_smallBlock
+        │       📝 The robot should walk towards the smallBlock (Object3), positioning itself in front of
+        │       📝               it. The goal state is the robot's base being in close proximity to the smallBlock, ready
+        │       📝               to reach it.
+        │   ├── walk_towards_smallBlock
+        │   │       📝 The robot should walk in the general direction of the smallBlock (Object3) until it
+        │   │       📝                   is within a reasonable distance to begin final approach. The goal state is the robot
+        │   │       📝                   being within a few meters of the smallBlock.
+        │   │       🔧 Object config: 1 path(s)
+        │   └── adjust_position_to_alignWith_smallBlock
+        │           📝 The robot should make final positional adjustments to be directly in front of the
+        │           📝                   smallBlock (Object3), ready to walk up to it. The goal state is the robot's base
+        │           📝                   being aligned with the smallBlock's center, a short distance away.
+        │           🔧 Object config: 1 path(s)
+        └── reach_smallBlock
+                📝 The robot should take the final steps to arrive at the smallBlock (Object3). The goal
+                📝               state is the robot's base being adjacent to the smallBlock, indicating task completion.
+            └── walk_to_smallBlock
+                    📝 The robot should walk the remaining short distance until its base is directly next
+                    📝                   to the smallBlock (Object3). The goal state is the robot's base being within a
+                    📝                   specified close proximity to the smallBlock.
+                    🔧 Object config: 1 path(s)

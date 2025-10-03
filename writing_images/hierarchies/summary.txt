@@ -1,0 +1,46 @@
+🌳 SKILL HIERARCHY VISUALIZATION SUMMARY
+📅 Generated: 2025-08-07 16:02:37
+📂 Source: /home/tomcannon/Documents/GenHRL_v2/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/manager_based/G1_generated/tasks
+📊 Total tasks processed: 19
+🎨 Output format: image
+📐 Layout style: staggered
+
+📁 Generated files:
+  - build_stairs_seed123_hierarchy_staggered.png
+  - build_stairs_seed123_hierarchy_staggered_vector.svg
+  - build_stairs_seed42_hierarchy_staggered.png
+  - build_stairs_seed42_hierarchy_staggered_vector.svg
+  - build_stairs_seed456_hierarchy_staggered.png
+  - build_stairs_seed456_hierarchy_staggered_vector.svg
+  - doorway_and_goal_seed123_hierarchy_staggered.png
+  - doorway_and_goal_seed123_hierarchy_staggered_vector.svg
+  - doorway_and_goal_seed42_hierarchy_staggered.png
+  - doorway_and_goal_seed42_hierarchy_staggered_vector.svg
+  - doorway_and_goal_seed456_hierarchy_staggered.png
+  - doorway_and_goal_seed456_hierarchy_staggered_vector.svg
+  - knock_over_pillars_seed123_hierarchy_staggered.png
+  - knock_over_pillars_seed123_hierarchy_staggered_vector.svg
+  - knock_over_pillars_seed42_hierarchy_staggered.png
+  - knock_over_pillars_seed42_hierarchy_staggered_vector.svg
+  - knock_over_pillars_seed456_hierarchy_staggered.png
+  - knock_over_pillars_seed456_hierarchy_staggered_vector.svg
+  - move_three_objects_seed123_hierarchy_staggered.png
+  - move_three_objects_seed123_hierarchy_staggered_vector.svg
+  - move_three_objects_seed42_hierarchy_staggered.png
+  - move_three_objects_seed42_hierarchy_staggered_vector.svg
+  - move_three_objects_seed456_hierarchy_staggered.png
+  - move_three_objects_seed456_hierarchy_staggered_vector.svg
+  - navigate_test_hierarchy_staggered.png
+  - navigate_test_hierarchy_staggered_vector.svg
+  - obstacle_course_seed123_hierarchy_staggered.png
+  - obstacle_course_seed123_hierarchy_staggered_vector.svg
+  - obstacle_course_seed42_hierarchy_staggered.png
+  - obstacle_course_seed42_hierarchy_staggered_vector.svg
+  - obstacle_course_seed456_hierarchy_staggered.png
+  - obstacle_course_seed456_hierarchy_staggered_vector.svg
+  - swimming_diving_board_seed123_hierarchy_staggered.png
+  - swimming_diving_board_seed123_hierarchy_staggered_vector.svg
+  - swimming_diving_board_seed42_hierarchy_staggered.png
+  - swimming_diving_board_seed42_hierarchy_staggered_vector.svg
+  - swimming_diving_board_seed456_hierarchy_staggered.png
+  - swimming_diving_board_seed456_hierarchy_staggered_vector.svg

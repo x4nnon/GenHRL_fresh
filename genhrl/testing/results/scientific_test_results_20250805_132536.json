@@ -1,0 +1,54 @@
+{
+  "metadata": {
+    "robot": "G1",
+    "provider": "google",
+    "isaaclab_path": "/home/tomcannon/Documents/GenHRL_v2/IsaacLab",
+    "timestamp": "20250805_132536",
+    "total_experiments": 2,
+    "focus": "generation_only"
+  },
+  "results": [
+    {
+      "task_name": "build_stairs_seed42",
+      "seed": 42,
+      "generation_success": true,
+      "generation_time": 1078.4142441749573,
+      "generated_skills": [
+        "ascend_first_step",
+        "build_stairs_seed42",
+        "ascend_second_step",
+        "position_large_block",
+        "ascend_third_step",
+        "position_small_block",
+        "climb_stairs",
+        "position_medium_block",
+        "build_stairs"
+      ],
+      "error_message": null
+    },
+    {
+      "task_name": "build_stairs_seed123",
+      "seed": 123,
+      "generation_success": true,
+      "generation_time": 1638.8084506988525,
+      "generated_skills": [
+        "walk_to_Medium_Block_for_climb",
+        "walk_to_Medium_Block_for_push",
+        "push_Large_Block_into_stair_base_position",
+        "jump_onto_Medium_Block",
+        "walk_to_Large_Block_for_push",
+        "build_stairs_seed123",
+        "jump_onto_Small_Block",
+        "push_Small_Block_into_stair_top_position",
+        "push_Medium_Block_into_stair_middle_position",
+        "walk_to_Small_Block_for_push",
+        "Build_Stairs",
+        "walk_to_Large_Block_for_climb",
+        "jump_onto_Large_Block",
+        "walk_to_Small_Block_for_climb",
+        "Climb_Stairs"
+      ],
+      "error_message": null
+    }
+  ]
+}

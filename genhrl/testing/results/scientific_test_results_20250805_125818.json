@@ -1,0 +1,30 @@
+{
+  "metadata": {
+    "robot": "G1",
+    "provider": "google",
+    "isaaclab_path": "/home/tomcannon/Documents/GenHRL_v2/IsaacLab",
+    "timestamp": "20250805_125818",
+    "total_experiments": 1,
+    "focus": "generation_only"
+  },
+  "results": [
+    {
+      "task_name": "build_stairs_seed42",
+      "seed": 42,
+      "generation_success": true,
+      "generation_time": 1078.4142441749573,
+      "generated_skills": [
+        "ascend_first_step",
+        "build_stairs_seed42",
+        "ascend_second_step",
+        "position_large_block",
+        "ascend_third_step",
+        "position_small_block",
+        "climb_stairs",
+        "position_medium_block",
+        "build_stairs"
+      ],
+      "error_message": null
+    }
+  ]
+}

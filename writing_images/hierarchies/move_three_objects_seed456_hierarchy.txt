@@ -1,0 +1,112 @@
+
+====================================================================================================
+📁 TASK: move_three_objects_seed456
+====================================================================================================
+📋 The robot should move each of the cubes from their start location onto the platform by pushing
+them individually.
+
+└── move_three_objects_seed456
+        📝 The robot should move each of the cubes from their start location onto the platform by pushing
+        📝       them individually.
+    ├── move_firstCube_to_platform
+    │       📝 Move the first cube from its starting position onto the platform.
+    │   ├── walk_to_firstCube
+    │   │       📝 The robot should walk to a position near the first cube, preparing to interact with it.
+    │   │       📝               The goal state is for the robot to be within a short distance of the first cube, ready
+    │   │       📝               to position itself for a push.
+    │   │       🔧 Object config: 1 path(s)
+    │   ├── position_robot_behind_firstCube_for_pushing_towards_platform
+    │   │       📝 The robot should maneuver itself to a stable position directly behind the first cube,
+    │   │       📝               aligning its body to push the cube in the general direction of the platform. The goal
+    │   │       📝               state is for the robot to be in a stable pushing stance, with the first cube between the
+    │   │       📝               robot and the platform's general direction.
+    │   │       🔧 Object config: 1 path(s)
+    │   ├── push_firstCube_towards_platform
+    │   │       📝 The robot should push the first cube from its current location towards the platform. The
+    │   │       📝               goal state is for the first cube to be significantly closer to the platform, having
+    │   │       📝               traversed a substantial portion of the distance from its original position.
+    │   │       🔧 Object config: 1 path(s)
+    │   ├── walk_to_platform
+    │   │       📝 The robot should walk to a position near the platform, preparing to push an object onto
+    │   │       📝               it. The goal state is for the robot to be within a short distance of the platform, ready
+    │   │       📝               to position itself for the final push.
+    │   │       🔧 Object config: 1 path(s)
+    │   ├── position_robot_behind_firstCube_for_pushing_onto_platform
+    │   │       📝 The robot should maneuver itself to a stable position directly behind the first cube,
+    │   │       📝               aligning its body to push the cube onto the platform. The goal state is for the robot to
+    │   │       📝               be in a stable pushing stance, with the first cube positioned at the edge of the
+    │   │       📝               platform, ready to be pushed on.
+    │   │       🔧 Object config: 1 path(s)
+    │   └── push_firstCube_onto_platform
+    │           📝 The robot should push the first cube from the edge of the platform fully onto the
+    │           📝               platform surface. The goal state is for the first cube to be entirely resting on the
+    │           📝               platform.
+    │           🔧 Object config: 1 path(s)
+    ├── move_secondCube_to_platform
+    │       📝 Move the second cube from its starting position onto the platform.
+    │   ├── walk_to_secondCube
+    │   │       📝 The robot should walk to a position near the second cube, preparing to interact with it.
+    │   │       📝               The goal state is for the robot to be within a short distance of the second cube, ready
+    │   │       📝               to position itself for a push.
+    │   │       🔧 Object config: 1 path(s)
+    │   ├── position_robot_behind_secondCube_for_pushing_towards_platform
+    │   │       📝 The robot should maneuver itself to a stable position directly behind the second cube,
+    │   │       📝               aligning its body to push the cube in the general direction of the platform. The goal
+    │   │       📝               state is for the robot to be in a stable pushing stance, with the second cube between
+    │   │       📝               the robot and the platform's general direction.
+    │   │       🔧 Object config: 1 path(s)
+    │   ├── push_secondCube_towards_platform
+    │   │       📝 The robot should push the second cube from its current location towards the platform.
+    │   │       📝               The goal state is for the second cube to be significantly closer to the platform, having
+    │   │       📝               traversed a substantial portion of the distance from its original position.
+    │   │       🔧 Object config: 1 path(s)
+    │   ├── walk_to_platform
+    │   │       📝 The robot should walk to a position near the platform, preparing to push an object onto
+    │   │       📝               it. The goal state is for the robot to be within a short distance of the platform, ready
+    │   │       📝               to position itself for the final push.
+    │   │       🔧 Object config: 1 path(s)
+    │   ├── position_robot_behind_secondCube_for_pushing_onto_platform
+    │   │       📝 The robot should maneuver itself to a stable position directly behind the second cube,
+    │   │       📝               aligning its body to push the cube onto the platform. The goal state is for the robot to
+    │   │       📝               be in a stable pushing stance, with the second cube positioned at the edge of the
+    │   │       📝               platform, ready to be pushed on.
+    │   │       🔧 Object config: 1 path(s)
+    │   └── push_secondCube_onto_platform
+    │           📝 The robot should push the second cube from the edge of the platform fully onto the
+    │           📝               platform surface. The goal state is for the second cube to be entirely resting on the
+    │           📝               platform.
+    │           🔧 Object config: 1 path(s)
+    └── move_thirdCube_to_platform
+            📝 Move the third cube from its starting position onto the platform.
+        ├── walk_to_thirdCube
+        │       📝 The robot should walk to a position near the third cube, preparing to interact with it.
+        │       📝               The goal state is for the robot to be within a short distance of the third cube, ready
+        │       📝               to position itself for a push.
+        │       🔧 Object config: 1 path(s)
+        ├── position_robot_behind_thirdCube_for_pushing_towards_platform
+        │       📝 The robot should maneuver itself to a stable position directly behind the third cube,
+        │       📝               aligning its body to push the cube in the general direction of the platform. The goal
+        │       📝               state is for the robot to be in a stable pushing stance, with the third cube between the
+        │       📝               robot and the platform's general direction.
+        │       🔧 Object config: 1 path(s)
+        ├── push_thirdCube_towards_platform
+        │       📝 The robot should push the third cube from its current location towards the platform. The
+        │       📝               goal state is for the third cube to be significantly closer to the platform, having
+        │       📝               traversed a substantial portion of the distance from its original position.
+        │       🔧 Object config: 1 path(s)
+        ├── walk_to_platform
+        │       📝 The robot should walk to a position near the platform, preparing to push an object onto
+        │       📝               it. The goal state is for the robot to be within a short distance of the platform, ready
+        │       📝               to position itself for the final push.
+        │       🔧 Object config: 1 path(s)
+        ├── position_robot_behind_thirdCube_for_pushing_onto_platform
+        │       📝 The robot should maneuver itself to a stable position directly behind the third cube,
+        │       📝               aligning its body to push the cube onto the platform. The goal state is for the robot to
+        │       📝               be in a stable pushing stance, with the third cube positioned at the edge of the
+        │       📝               platform, ready to be pushed on.
+        │       🔧 Object config: 1 path(s)
+        └── push_thirdCube_onto_platform
+                📝 The robot should push the third cube from the edge of the platform fully onto the
+                📝               platform surface. The goal state is for the third cube to be entirely resting on the
+                📝               platform.
+                🔧 Object config: 1 path(s)
